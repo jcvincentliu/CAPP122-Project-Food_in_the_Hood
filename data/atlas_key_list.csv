@@ -1,0 +1,270 @@
+,name,key,description,units,format
+0,Accidents mortality,VRAC,Number of people who died due to an unintentional injury.,count of deaths,0 decimal places
+1,Accidents mortality rate,VRACR,Age-adjusted rate of people who died due to an unintentional injury.,"per 100,000 population",1 decimal place
+2,Adult asthma,HCSATH,"Number of adults who reported that a doctor, nurse or other health professional has diagnosed them with asthma, and they currently have asthma.",count of adults,0 decimal places
+3,Adult asthma rate,HCSATHP,"Percent of adults who reported that a doctor, nurse or other health professional has diagnosed them with asthma, and they currently have asthma.",% of adults,1 decimal place
+4,Adult binge drinking,HCSBD,"Number of adults who report binge drinking (men having 5 or more drinks on one occasion, women having 4 or more drinks on one occasion) in the past month.",count of adults,0 decimal places
+5,Adult binge drinking rate,HCSBDP,"Percent of adults who report binge drinking (men having 5 or more drinks on one occasion, women having 4 or more drinks on one occasion) in the past month.",% of adults,1 decimal place
+6,Adult diabetes,HCSDIA,"Number of adults who reported that a doctor, nurse or other health professional has diagnosed them with diabetes (excludes pre-diabetes or diabetes only during pregnancy).",count of adults,0 decimal places
+7,Adult diabetes rate,HCSDIAP,"Percent of adults who reported that a doctor, nurse or other health professional has diagnosed them with diabetes (excludes pre-diabetes or diabetes only during pregnancy).",% of adults,1 decimal place
+8,Adult e-cigarette use,HCSEC,Number of adults who report that they have used electronic cigarettes in the past 30 days.,count of adults,0 decimal places
+9,Adult e-cigarette use rate,HCSECP,Percent of adults who report that they have used electronic cigarettes in the past 30 days.,% of adults,1 decimal place
+10,Adult flu vaccination,HCSFLU,Number of adults who report that they had a flu shot or a flu vaccine that was sprayed in their nose within the past 12 months.,count of adults,0 decimal places
+11,Adult flu vaccination rate,HCSFLUP,Percent of adults who report that they had a flu shot or a flu vaccine that was sprayed in their nose within the past 12 months.,% of adults,1 decimal place
+12,Adult fruit and vegetable servings,HCSFV,Number of adults who reported eating five or more servings of fruits and vegetables (combined) daily.,count of adults,0 decimal places
+13,Adult fruit and vegetable servings rate,HCSFVP,Percent of adults who reported eating five or more servings of fruits and vegetables (combined) daily.,% of adults,1 decimal place
+14,Adult obesity,HCSOB,Number of adults who reported a height and weight that yield a body mass index of 30 or greater.,count of adults,0 decimal places
+15,Adult obesity rate,HCSOBP,Percent of adults who reported a height and weight that yield a body mass index of 30 or greater.,% of adults,1 decimal place
+16,Adult physical inactivity,HCSPA,Number of adults who reported that they did not participate in any physical activities or exercises in the past month.,count of adults,0 decimal places
+17,Adult physical inactivity rate,HCSPAP,Percent of adults who reported that they did not participate in any physical activities or exercises in the past month.,% of adults,1 decimal place
+18,Adult smoking,HCSSMK,Number of adults who report that they've smoked at least 100 cigarettes in their life and report that they now smoke cigarettes every day or some days.,count of adults,0 decimal places
+19,Adult smoking rate,HCSSMKP,Percent of adults who report that they've smoked at least 100 cigarettes in their life and report that they now smoke cigarettes every day or some days.,% of adults,1 decimal place
+20,Adult soda consumption,HCSS,"Number of adults who drank soda or pop or other sweetened drinks like sweetened iced tea, sports drinks, fruit punch or other fruit-flavored drinks at least once per day in the past month.",count of adults,0 decimal places
+21,Adult soda consumption rate,HCSSP,"Percent of adults who drank soda or pop or other sweetened drinks like sweetened iced tea, sports drinks, fruit punch or other fruit-flavored drinks at least once per day in the past month.",% of adults,1 decimal place
+22,Alcohol-induced mortality,VRAL,"Number of people who died due to dependent and nondependent use of alcohol or accidental poisoning by alcohol, excluding unintentional injuries, homicides, other causes indirectly related to alcohol use, and fetal alcohol syndrome.",count of deaths,0 decimal places
+23,Alcohol-induced mortality rate,VRALR,Age-adjusted rate of people who died due to dependent and nondependent use of alcohol or accidental poisoning by alcohol.,"per 100,000 population",2 decimal places
+24,Alcohol-related hospitalization rate,HDALR,"Age-adjusted rate of alcohol-related hospitalization discharges, excluding discharges to Veterans Administration hospitals.","per 10,000 population",1 decimal place
+25,Alcohol-related hospitalizations,HDAL,"Number of inpatient hospitalization discharges due to alcohol-related
+disease, injury or conditions.",count of hospitalizations,0 decimal places
+26,All-cause mortality,VRDTH,Number of deaths due to all causes.,count of deaths,0 decimal places
+27,All-cause mortality rate,VRDTHR,Age-adjusted rate of all deaths due to any cause of death.,"per 100,000 population",1 decimal place
+28,Alzheimer's disease mortality,VRAD,Number of people who died due to Alzheimer's disease.,count of deaths,0 decimal places
+29,Alzheimer's disease mortality rate,VRADR,Age-adjusted rate of people who died due to Alzheimer's disease.,"per 100,000 population",1 decimal place
+30,Ambulatory difficulty,DIW,Percent of residents reporting serious difficulty walking or climbing stairs.,% of residents,2 decimal places
+31,Annual dental cleaning,HCSDC,Number of adults who report that they have had their teeth cleaned by a dentist or hygienist in the past year.,count of adults,0 decimal places
+32,Annual dental cleaning rate,HCSDCP,Percent of adults who report that they have had their teeth cleaned by a dentist or hygienist in the past year.,% of adults,1 decimal place
+33,Asthma ED visit rate,HDEDR,"Rate of inpatient hospitalization discharges, excluding discharges to Veterans Administration hospitals, due to mood disorders including bipolar and manic depressive disorders.","per 10,000 population",2 decimal places
+34,Asthma ED visits,HDED,"Number of inpatient hospitalization discharges, excluding discharges to Veterans Administration hospitals, due to asthma.",count of hospitalizations,0 decimal places
+35,Avoidable ED visit rate,HDAVR,"Age-adjusted rate of emergency department (ED) discharges that are non-urgent or primary care treatable, excluding discharges to Veterans Administration hospitals.","per 10,000 population",1 decimal place
+36,Avoidable ED visits,HDAV,"Number of emergency department (ED) discharges, excluding discharges to Veterans Administration hospitals, that are non-urgent or primary care treatable.",count of hospitalizations,0 decimal places
+37,Behavioral health hospitalization rate,HDBHR,"Age-adjusted rate of behavioral health hospitalization discharges, excluding discharges to Veterans Administration hospitals.","per 10,000 population",1 decimal place
+38,Behavioral health hospitalizations,HDBH,"Number of inpatient hospitalization discharges, excluding discharges to Veterans Administration hospitals, with a primary diagnosis code of substance use disorder and mental disorders.",count of hospitalizations,0 decimal places
+39,Behavioral health treatment,HCSBH,Number of adults who reported serious psychological distress and reported that they are currently taking medicine or receiving treatment from a doctor or other health professional for any mental health condition or emotional problem.,count of adults,0 decimal places
+40,Behavioral health treatment rate,HCSBHP,Percent of adults who reported serious psychological distress and reported that they are currently taking medicine or receiving treatment from a doctor or other health professional for any mental health condition or emotional problem.,% of adults,1 decimal place
+41,Birth rate,VRBIR,Rate of births.,"per 1,000 population",1 decimal place
+42,Births,VRBI,Number of births.,count of births,0 decimal places
+43,Breast cancer screening,HCSBC,Number of women ages 45 and older who reported having a mammogram within the past 2 years.,count of women,0 decimal places
+44,Breast cancer screening rate,HCSBCP,Percent of women ages 45 and older who reported having a mammogram in the past two years.,% of women,1 decimal place
+45,Bullying,YRBUL,Number of students who report being bullied on school property in the past 12 months.,count of students,0 decimal places
+46,Bullying rate,YRBULP,Percent of CPS high school students who report being bullied on school property in the past 12 months.,% of students,1 decimal place
+47,Cancer diagnosis rate,CCR,"Annual diagnosis rate for all invasive cancers. Does not include pre-cancerous diagnoses such as breast cancer in situ or urinary cancer in situ. All ages, risk-adjusted.","per 100,000 population",2 decimal places
+48,Cancer mortality,VRCA,Number of people who died due to all cancer causes.,count of deaths,0 decimal places
+49,Cancer mortality rate,VRCAR,Age-adjusted rate of  people who died due to cancer.,"per 100,000 population",1 decimal place
+50,Cervical cancer diagnosis rate,CCC,"Annual diagnosis rate for cervical cancer. Ages 15 and over, age-adjusted.","per 100,000 female population",2 decimal places
+51,Cervical cancer mortality,VRCV,Number of female deaths due to cancer of the uterine cervix.,count of deaths,0 decimal places
+52,Cervical cancer mortality rate,VRCVR,Age-adjusted rate of female deaths due to cancer of the uterine cervix.,"per 100,000 population",1 decimal place
+53,Cervical cancer screening,HCSCV,Number of women who have not had a hysterectomy and who report having a Pap test within the past 3 years.,count of women,0 decimal places
+54,Cervical cancer screening rate,HCSCVP,Percent of women who have not had a hysterectomy and who report having a Pap test within the past 3 years.,% of women,1 decimal place
+55,Cesarean delivery,VRDEL,"Number of cesarean delivery births among full-term, singleton, vertex presentation births where the mother had no prior cesarean.",count of births,0 decimal places
+56,Cesarean delivery rate,VRDELP,"Percent of cesarean delivery births among all full-term, singleton, vertex presentation births where the mother had no prior cesarean.",% of births,1 decimal place
+57,Child Opportunity Index 2.0,COIOV,"A composite index that captures neighborhood resources and conditions that matter for children's healthy development scored as Very Low (5), Low (4), Moderate (3), High (2), and Very High (1)",,0 decimal places
+58,Child Opportunity Index 2.0-ED,COIED,"The education domain of the Child Opportunity Index 2.0 scored as Very Low (5), Low (4), Moderate (3), High (2), and Very High (1)",,0 decimal places
+59,Child Opportunity Index 2.0-HE,COIHE,"The health and environment domain of the Child Opportunity Index 2.0 scored as Very Low (5), Low (4), Moderate (3), High (2), and Very High (1)",,0 decimal places
+60,Child Opportunity Index 2.0-SE,COISE,"The social and economic domain of the Child Opportunity Index 2.0 scored as Very Low (5), Low (4), Moderate (3), High (2), and Very High (1)",,0 decimal places
+61,Chlamydia,STDCH,Individuals diagnosed with chlamydia infection.,count of individuals,0 decimal places
+62,Chlamydia rate,STDCHR,"Individuals diagnosed with chlamydia infection per 100,000 population.","per 100,000 population",1 decimal place
+63,Chronic liver disease and cirrhosis mortality,VRLV,Number of people who died due to chronic liver disease and cirrhosis.,count of deaths,0 decimal places
+64,Chronic liver disease and cirrhosis mortality rate,VRLVR,Age-adjusted rate of people who died due to chronic liver disease and cirrhosis.,"per 100,000 population",1 decimal place
+65,Chronic lower respiratory disease mortality,VRLR,Number of people who died due to chronic lower respiratory disease.,count of deaths,0 decimal places
+66,Chronic lower respiratory disease mortality rate,VRLRR,Age-adjusted rate of people who died due to chronic lower respiratory disease.,"per 100,000 population",1 decimal place
+67,Cognitive difficulty,DIV,Percent of residents reporting a cognitive difficulty.,% of residents,2 decimal places
+68,College graduation rate,EDE,Residents 25 or older with a four-year college (bachelor's) degree or higher,% of residents,2 decimal places
+69,Colorectal cancer diagnosis rate,CCO,"Annual diagnosis rate for colorectal cancer. Ages 15 and over, risk-adjusted.","per 100,000 population",2 decimal places
+70,Colorectal cancer mortality,VRCR,Number of people who died due to colorectal cancer.,count of deaths,0 decimal places
+71,Colorectal cancer mortality rate,VRCRR,Age-adjusted rate of people who died due to colorectal cancer.,"per 100,000 population",1 decimal place
+72,Colorectal cancer screening,HCSCR,Number of adults age 45 and older who reported having a colonoscopy or sigmoidoscopy in the past 5 years or a blood stool test in the past year.,count of adults,0 decimal places
+73,Colorectal cancer screening rate,HCSCRP,Percent of adults age 45 and older who reported having a colonoscopy or sigmoidoscopy in the past 5 years or a blood stool test in the past year.,% of adults,1 decimal place
+74,Community belonging,HCSCB,Number of adults who reported that they strongly agree or agree that they really feel part of their neighborhood.,count of adults,0 decimal places
+75,Community belonging rate,HCSCBP,Percent of adults who reported that they strongly agree or agree that they really feel part of their neighborhood.,% of adults,1 decimal place
+76,Coronary heart disease mortality,VRCHD,Number of people who died due to coronary heart disease.,count of deaths,0 decimal places
+77,Coronary heart disease mortality rate,VRCHDR,Age-adjusted rate of people who died due to coronary heart disease.,"per 100,000 population",1 decimal place
+78,COVID-19 case rate,CDCOVCR,"PCR and antigen positive cases per 100,000 population","rate per 100,000 population",1 decimal place
+79,COVID-19 cases,CDCOVC,COVID-19 cases among Chicago residents,count of cases,0 decimal places
+80,COVID-19 death rate,CDCOVDR,"Rate of COVID-19 related deaths per 100,000 population","rate per 100,000 population",1 decimal place
+81,COVID-19 deaths,CDCOVD,Deaths due to COVID-19,count of deaths,0 decimal places
+82,COVID-19 hospitalization rates,CHADXHPR,"Rate of hospitalizations among COVID-19 cases per 100,000 population","rate per 100,000 population",1 decimal place
+83,COVID-19 hospitalizations,CHADXHP,Hospitalizations among COVID-19 cases,count of hospitalizations,0 decimal places
+84,COVID-19 Vaccination Completion Rate,COVIV,"Percentage of the population that has completed the vaccine series: the first dose of a one-dose series, the second dose of a two-dose series, etc. Last updated yesterday.",% of residents,1 decimal place
+85,Crowded housing,HTJ,Percent of occupied housing units with more than one occupant per room (e.g. three occupants in a one-bedroom apartment).,% of occupied housing units,2 decimal places
+86,Demographics,PCT,"Percent of residents within each demographic group. Use this topic to explore age, gender, and racial/ethnic breakdowns.",% of residents,2 decimal places
+87,Dental care ED visit rate,HDDCR,"Age-adjusted rate of dental care emergency department (ED) visits, excluding discharges to Veterans Administration hospitals.","per 10,000 population",1 decimal place
+88,Dental care ED visits,HDDC,"Number of emergency department (ED) visits, excluding discharges to Veterans Administration hospitals, for dental-related causes.",count of hospitalizations,0 decimal places
+89,Diabetes mortality,VRDIA,Number of people who died due to diabetes.,count of deaths,0 decimal places
+90,Diabetes mortality rate,VRDIAR,Age-adjusted rate of people who died due to diabetes.,"per 100,000 population",1 decimal place
+91,Diabetes-related hospitalization rate,HDDIAR,"Age-adjusted rate of diabetes-related hospitalization discharges, excluding discharges to Veterans Administration hospitals.","per 10,000 population",1 decimal place
+92,Diabetes-related hospitalizations,HDDIA,"Number of inpatient hospitalization discharges, excluding discharges to Veterans Administration hospitals, due to diabetes mellitus with or without related complications.",count of hospitalizations,0 decimal places
+93,Diabetes-related lower extremity amputation hospitalization rate,HDDRAR,"Age-adjusted rate of diabetes-related lower extremity amputation hospitalization discharges, excluding discharges to Veterans Administration hospitals.","per 10,000 population",1 decimal place
+94,Diabetes-related lower extremity amputation hospitalizations,HDDRA,"Number of inpatient hospitalization discharges, excluding discharges to Veterans Administration hospitals, due to diabetes mellitus with or without related complications.",count of hospitalizations,0 decimal places
+95,Diabetes-related mortality,VRDIB,Number of people for whom diabetes was a primary or secondary cause of death.,count of deaths,0 decimal places
+96,Diabetes-related mortality rate,VRDIBR,Age-adjusted rate of people for whom diabetes is a primary or secondary cause.,"per 100,000 population",1 decimal place
+97,Diet-related mortality,VRDI,Number of people who died due to nutrition-related chronic diseases.,count of deaths,0 decimal places
+98,Diet-related mortality rate,VRDIR,Age-adjusted rate of people who died due to nutrition-related chronic diseases.,"per 100,000 population",1 decimal place
+99,Disability,DIS,"Percent of residents with a disability, defined as one or more sensory disabilities or difficulties with everyday tasks.",% of residents,2 decimal places
+100,Distant/systemic cancer diagnosis rate,CCS,"Annual diagnosis rate for cancers with distant or systemic spread, often referred to as Stage 4 or metastatic cancer. Diagnosis at this stage has a significantly reduced chance of long-term survival for some cancers. All ages, risk-adjusted.","per 100,000 population",2 decimal places
+101,Drug-induced mortality,VRDID,"Number of people who died due to poisoning and medical conditions caused by use of legal or illegal drugs or deaths from poisoning due to medically prescribed and other drugs. It excludes unintentional injuries, homicides, and other causes indirectly related to drug use, as well as newborn deaths due to the mother’s drug use.",count of deaths,0 decimal places
+102,Drug-induced mortality rate,VRDIDR,Age-adjusted rate of people who died due to poisoning and medical conditions caused by use of legal or illegal drugs or from poisoning due to medically prescribed and other drugs.,"per 100,000 population",1 decimal place
+103,Drug overdose mortality,VRDO,Number of people who died due to drug overdose.,count of deaths,0 decimal places
+104,Drug overdose mortality rate,VRDOR,Age-adjusted rate of people who died due to drug overdose.,"per 100,000 population",1 decimal place
+105,Drug-related hospitalization rate,HDDRR,"Age-adjusted rate of drug-related hospitalization discharges, excluding discharges to Veterans Administration hospitals.","per 10,000 population",1 decimal place
+106,Drug-related hospitalizations,HDDR,"Number of inpatient hospitalization discharges, excluding discharges to Veterans Administration hospitals, due to drug abuse, adverse reactions to drugs, or other drug-related consequences.",count of hospitalizations,0 decimal places
+107,Early and adequate prenatal care,VRPNC,Number of births where mother received adequate prenatal care by the Adequacy of Prenatal Care Utilization Index (APNCU).,count of births,0 decimal places
+108,Early and adequate prenatal care rate,VRPNCP,Percent of births where mother received adequate prenatal care by the Adequacy of Prenatal Care Utilization Index (APNCU).,% of births,1 decimal place
+109,Easy access to fruits and vegetables,HCSFVA,Number of adults who reported that it is very easy for them to get fresh fruits and vegetables.,count of adults,0 decimal places
+110,Easy access to fruits and vegetables rate,HCSFVAP,Percent of adults who reported that it is very easy for them to get fresh fruits and vegetables.,% of adults,1 decimal place
+111,Economic Diversity Index,EDX,"The Economic Diversity Index measures the probability that any two residents of an area, chosen at random, belong to different family income levels, measured as multiples of the Federal Poverty Level. A score of 0 represents a perfectly homogenous community; the higher the score, the more economically diverse the area. The highest possible score is 0.833, not 1.",,2 decimal places
+112,Engagement in HIV care,HIVENG,Individuals living with HIV who have had at least one medical visit.,count of individuals,0 decimal places
+113,Engagement in HIV care rate,HIVENGP,Percentage of individuals who have had at least one medical visit among all persons living with HIV infection.,% of individuals,1 decimal place
+114,Female breast cancer mortality,VRBC,Number of female deaths due to breast cancer.,count of deaths,0 decimal places
+115,Female breast cancer mortality rate,VRBCR,Age-adjusted rate of female deaths due to breast cancer.,"per 100,000 female population",1 decimal place
+116,Firearm-related homicide mortality,VRFI,Number of people who died due to firearm-related homicide.,count of deaths,0 decimal places
+117,Firearm-related homicide mortality rate,VRFIR,Age-adjusted rate of people who died due to firearm-related homicide.,"per 100,000 population",1 decimal place
+118,Food stamps (SNAP),SNP,"Percent of households receiving Supplemental Nutrition Assistance Program (SNAP) benefits, formerly known as food stamps, over the past 12 months.",% of households,2 decimal places
+119,Foreign born,FOR,Percent of residents who were not U.S. citizens at the time of birth (includes both naturalized citizens and those who are not currently citizens).,% of residents,2 decimal places
+120,General fertility rate,VRFER,Rate of births to mothers of childbearing age (15-44 years).,"per 1,000 population females aged 15-44 years",1 decimal place
+121,Gonorrhea,STDGN,Individuals diagnosed with gonorrhea infection,count of individuals,0 decimal places
+122,Gonorrhea rate,STDGNR,"Individuals diagnosed with gonorrhea infection per 100,000 population","per 100,000 population",1 decimal place
+123,Hardship Index,HDX,"The Hardship Index is a composite score reflecting hardship in the community (higher values indicate greater hardship). It incorporates unemployment, age dependency, education, per capita income, crowded housing, and poverty into a single score that allows comparison between geographies. It is highly correlated with other measures of economic hardship, such as labor force statistics, and with poor health outcomes. See technical notes for details.",score,1 decimal place
+124,Health care satisfaction,HCSHC,Number of adults who report that they were very satisfied with the health care they received in the past year.,count of adults,0 decimal places
+125,Health care satisfaction rate,HCSHCP,Percent of adults who report that they were very satisfied with the health care they received in the past year.,% of adults,1 decimal place
+126,Hearing difficulty,DIT,Percent of residents reporting a hearing difficulty.,% of residents,2 decimal places
+127,Heart disease mortality,VRHD,Number of people who died due to heart disease.,count of deaths,0 decimal places
+128,Heart disease mortality rate,VRHDR,Age-adjusted rate of people who died due to heart disease.,"per 100,000 population",1 decimal place
+129,High school graduation rate,EDB,Residents 25 or older with at least a high school degree: including GED and any higher education,% of residents,2 decimal places
+130,HIV incidence,HIVI,Individuals newly diagnosed with HIV infection.,count of individuals,0 decimal places
+131,HIV incidence rate,HIVIR,"Total number of individuals newly diagnosed with HIV infection per 100,000 population.","per 100,000 population",1 decimal place
+132,HIV prevalence,HIVP,Individuals living with HIV infection.,count of individuals,0 decimal places
+133,HIV prevalence rate,HIVPR,"Individuals living with HIV infection per 100,000 population.","per 100,000 population",1 decimal place
+134,HIV-related mortality,HIVD,Individuals who died from an HIV related cause.,count of deaths,0 decimal places
+135,HIV-related mortality rate,HIVDR,"Individuals who died from an HIV related cause per 100,000 population.","per 100,000 population",1 decimal place
+136,HIV viral suppression,HIVVS,HIV positive individuals with a viral load under 200 copies/mL.,count of individuals,0 decimal places
+137,HIV viral suppression rate,HIVVSR,"HIV positive individuals with a viral load under 200 copies/mL per 100,000 population.","per 100,000 population",1 decimal place
+138,Homicide mortality,VFHO,Number of people who died due to homicide.,count of deaths,0 decimal places
+139,Homicide mortality rate,VRHOR,Age-adjusted rate of people who died due to homicide.,"per 100,000 population",1 decimal place
+140,Households in poverty not receiving food stamps (SNAP),SNQ,Percent of households with income in the past 12 months below the poverty level who did not receive food stamps/SNAP in the past 12 months.,% of households below the poverty line,2 decimal places
+141,Hypertension,HCSHYT,"Number of adults who reported that a doctor, nurse or other health professional has diagnosed them with high blood pressure (excludes borderline high, pre-hypertensive or hypertension diagnosed only during pregnancy) .",count of adults,0 decimal places
+142,Hypertension rate,HCSHYTP,"Percent of adults who reported that a doctor, nurse or other health professional has diagnosed them with high blood pressure (excludes borderline high, pre-hypertensive or hypertension diagnosed only during pregnancy).",% of adults,1 decimal place
+143,Independent living difficulty,DIX,Percent of residents reporting difficulty doing errands alone such as visiting a doctor's office or shopping.,% of residents,2 decimal places
+144,Infant mortality,VRIM,Number of infant (aged under one year) deaths.,count of deaths,0 decimal places
+145,Infant mortality rate,VRIMR,Rate of infant deaths.,"per 1,000 live births",1 decimal place
+146,Influenza & pneumonia mortality,VRFLU,Number of people who died due to influenza or pneumonia.,count of deaths,0 decimal places
+147,Influenza & pneumonia mortality rate,VRFLUR,Age-adjusted rate of people who died due to influenza or pneumonia.,"per 100,000 population",1 decimal place
+148,Injury mortality,VRIN,Number of people who died due to any injury.,count of deaths,0 decimal places
+149,Injury mortality rate,VRINR,Age-adjusted rate of people who died due to any injury.,"per 100,000 population",1 decimal place
+150,Invasive breast cancer diagnosis rate,CCB,"Annual diagnosis rate for invasive (non-DCIS) breast cancer in women. Ages 15 and over, age-adjusted.","per 100,000 female population",2 decimal places
+151,Lead poisoning,LDPC,Children ages 1-5 with blood lead level at or above 5 micrograms per deciliter,count of children ages 1-5,0 decimal places
+152,Lead poisoning (historical),LDPCH,Children ages 1-5 with blood lead level at or above 10 micrograms per deciliter,count of children ages 1-5,0 decimal places
+153,Lead poisoning rate,LDPP,Percent of children ages 1-5 with blood lead level at or above 5 micrograms per deciliter,% of children ages 1-5,1 decimal place
+154,Lead poisoning rate (historical),LDPPH,Percent of children ages 1-5 with blood lead level at or above 10 micrograms per deciliter,% of children ages 1-5,1 decimal place
+155,Leukemia and lymphoma diagnosis rate,CCL,"Annual diagnosis rate for leukemias and lymphomas (Hodgkin's and non-Hodgkin's). All ages, risk-adjusted.","per 100,000 population",2 decimal places
+156,Life expectancy,VRLE,The average number of years a person may expect to live.,years,1 decimal place
+157,Limited English proficiency,LEQ,"Percentage of residents 5 years and older who do not speak English ""very well"".",% of residents,2 decimal places
+158,Linkage to HIV care,HIVLIN,Individuals linked to HIV medical care within 90 days of diagnosis.,count of individuals,0 decimal places
+159,Linkage to HIV care rate,HIVLINP,Percentage of individuals linked to HIV medical care within 90 days of a newly diagnosed HIV infection.,%,1 decimal place
+160,Low birthweight,VRBW,Number of births with birthweight less than 2500 grams (5.5 pounds).,count of births,0 decimal places
+161,Low birthweight rate,VRBWP,Percent of births with a birthweight less than 2500 grams (5.5 pounds).,% of births,1 decimal place
+162,Low food access,LFA,"Percent of residents who have low access to food, defined solely by distance: further than 1/2 mile from the nearest supermarket in an urban area, or further than 10 miles in a rural area.",% of residents,2 decimal places
+163,Lung and bronchus cancer mortality,VRLB,Number of people who died due to lung cancer,count of deaths,0 decimal places
+164,Lung and bronchus cancer mortality rate,VRLBR,Age-adjusted rate of people who died due to lung cancer.,"per 100,000 population",1 decimal place
+165,Lung cancer diagnosis rate,CCG,"Annual diagnosis rate for lung and bronchus cancer. Ages 15 and over, risk-adjusted.","per 100,000 population",2 decimal places
+166,Mean age at first birth,VRMA,The arithmetic average of a mother's age at first birth (first child born alive).,age,0 decimal places
+167,Median household income,INC,Income in the past 12 months.,,Dollars
+168,Mood and depressive disorder hospitalization rate,HDMDR,"Age-adjusted rate of mood and depressive disorder hospitalization discharges, excluding discharges to Veterans Administration hospitals.","per 10,000 population",1 decimal place
+169,Mood and depressive disorder hospitalizations,HDMD,"Number of inpatient hospitalization discharges, excluding discharges to Veterans Administration hospitals, due to mood disorders including bipolar and manic depressive disorders.",count of hospitalizations,0 decimal places
+170,Motor vehicle crash mortality,VRMV,Number of people who died due to a motor vehicle crash.,count of deaths,0 decimal places
+171,Motor vehicle crash mortality rate,VRMVR,Age-adjusted rate of people who died due to a motor vehicle crash.,"per 100,000 population",1 decimal place
+172,Neighborhood safety,HCSNS,"Number of adults who report that they feel safe in their neighborhood ""all of the time"" or ""most of the time"".",count of adults,0 decimal places
+173,Neighborhood safety rate,HCSNSP,"Percent of adults who report that they feel safe in their neighborhood ""all of the time"" or ""most of the time"".",% of adults,1 decimal place
+174,"Nephritis, nephrotic syndrome and nephrosis mortality",VRNE,"Number of people who died due to kidney disease, including nephritis, nephrotic syndrome and nephrosis.",count of deaths,0 decimal places
+175,"Nephritis, nephrotic syndrome and nephrosis mortality rate",VRNER,"Age-adjusted rate of people who died due to kidney disease, including nephritis, nephrotic syndrome and nephrosis.","per 100,000 population",1 decimal place
+176,Nervous system cancer diagnosis rate,CCN,"Annual diagnosis rate for cancer of the central nervous system, including brain. All ages, risk-adjusted.","per 100,000 population",2 decimal places
+177,No checking or savings account,HCSSAV,Number of adults who reported that no one in their household including themselves currently has a checking or savings account.,count of adults,0 decimal places
+178,No checking or savings account rate,HCSSAVP,Percent of adults who reported that no one in their household including themselves currently has a checking or savings account.,% of adults,1 decimal place
+179,Opioid-related overdose mortality,MEOD,Number of Chicago residents who died from an opioid-related drug overdose.,count of deaths,0 decimal places
+180,Opioid-related overdose mortality (Chicago location),MEODL,"Total number of individuals who died from an opioid-related drug overdose at a location in Chicago, even if they did not reside in Chicago.",count of deaths,0 decimal places
+181,Opioid-related overdose mortality rate,MEODR,"Age-adjusted rate of opioid-related overdose deaths among Chicago residents per 100,000 population.","per 100,000 population",1 decimal place
+182,Opioid-related overdoses,EMSOD,Number of responses to opioid-related overdoses by Chicago Fire Department ambulances.,count of EMS responses,0 decimal places
+183,Oral cancer diagnosis rate,CCD,"Annual diagnosis rate for oral cancer (oral cavity and pharynx). Ages 15 and over, risk-adjusted.","per 100,000 population",2 decimal places
+184,"Overall health status - excellent, very good, good",HCSOHS,"Number of adults who reported that their overall health is good, very good or excellent.",count of adults,0 decimal places
+185,"Overall health status - excellent, very good, good rate",HCSOHSP,"Percent of adults who reported that their overall health is good, very good or excellent.",% of adults,1 decimal place
+186,Particulate matter (PM 2.5) concentration,PMC,"Annual average concentration in micrograms per cubic meter. PM 2.5, or particulate matter smaller than 2.5 microns in diameter, is one of the most dangerous pollutants because the particles can penetrate deep into the alveoli of the lungs.",µg/m3,3 decimal places
+187,Per capita income,PCI,Income in the past 12 months.,,Dollars
+188,Population,POP,Average population over the time period.,residents,0 decimal places
+189,Poverty rate,POV,Percent of residents in families that are in poverty (below the Federal Poverty Level).,% of residents,2 decimal places
+190,Prenatal care in first trimester,VRTRI,Number of births with entry into prenatal care in the first trimester.,count of births,0 decimal places
+191,Prenatal care in first trimester rate,VRTRIP,Percent of births with entry into prenatal care in the first trimester.,% of births,1 decimal place
+192,Preschool enrollment,EDG,Percentage of 3- and 4-year-olds enrolled in school.,% of toddlers,2 decimal places
+193,Prescription opiate misuse,HCSOP,"Number of adults who have taken a higher dose of a prescription pain medication than what was prescribed to them, or have taken prescription pain medication that was not prescribed to them in the past 12 months.",count of adults,0 decimal places
+194,Prescription opiate misuse rate,HCSOPP,"Percent of adults who have taken a higher dose of a prescription pain medication than what was prescribed to them, or have taken prescription pain medication that was not prescribed to them in the past 12 months.",% of adults,1 decimal place
+195,Preterm births,VRPT,Number of births with valid gestational age less than 37 weeks.,count of births,0 decimal places
+196,Preterm births rate,VRPTP,Percent of births with valid gestational age less than 37 weeks.,% of births,1 decimal place
+197,Preventable hospitalization rate,HDPVR,Age-adjusted rate of preventable hospitalization rates among adults,"per 10,000 adult population",1 decimal place
+198,Preventable hospitalizations,HDPV,Number of adults hospitalized for conditions that could be managed in a clinic setting.,count of hosptializations,0 decimal places
+199,Primary care provider,HCSPCP,Number of adults who report that they have at least one person they think of as their personal doctor or health care provider.,count of adults,0 decimal places
+200,Primary care provider rate,HCSPCPP,Percent of adults who report that they have at least one person they think of as their personal doctor or health care provider.,% of adults,1 decimal place
+201,Prostate cancer diagnosis rate,CCP,"Annual diagnosis rate for prostate cancer. Ages 15 and over, age-adjusted.","per 100,000 male population",2 decimal places
+202,Prostate cancer mortality,VRPR,Number of male deaths due to prostate cancer.,count of males,0 decimal places
+203,Prostate cancer mortality rate,VRPRR,Age-adjusted rate of male deaths due to prostate cancer.,"per 100,000 male population",1 decimal place
+204,Public assistance income (cash welfare),TNF,"Percent of households reporting public assistance income over the past 12 months. This includes general assistance and Temporary Aid to Needy Families (TANF), or cash public assistance. This excludes Supplemental Security Income (SSI) and noncash benefits such as food stamps.",% of households,2 decimal places
+205,Received needed care,HCSNC,"Number of adults who report that it is ""usually"" or ""always"" easy to get the care, tests or treatment they needed through their health plan.",count of adults,0 decimal places
+206,Received needed care rate,HCSNCP,"Percent of adults who report that it is ""usually"" or ""always"" easy to get the care, tests or treatment they needed through their health plan.",% of adults,1 decimal place
+207,Rent-burdened,RBU,"Households spending more than 30% of income on rent are considered rent-burdened. Rent costs do not include utilities, insurance, or building fees.",% of renter-occupied housing units,2 decimal places
+208,Routine checkup,HCSRC,Number of adults who visited a doctor or health care provider for a routine checkup in the past year.,count of adults,0 decimal places
+209,Routine checkup rate,HCSRCP,Percent of adults who visited a doctor or health care provider for a routine checkup in the past year.,% of adults,1 decimal place
+210,Schizophrenic disorder hospitalization rate,HDSZR,"Age-adjusted rate of schizophrenic or other psychotic disorder hospitalization discharges, excluding discharges to Veterans Administration hospitals.","per 10,000 population",1 decimal place
+211,Schizophrenic disorder hospitalizations,HDSZ,"Number of inpatient hospitalization discharges, excluding discharges to Veterans Administration hospitals, due to schizophrenia or other psychotic disorders.",count of hospitalizations,0 decimal places
+212,School fights,YRSF,Number of students who report being in a physical fight on school property in the past 12 months.,count of students,0 decimal places
+213,School fights rate,YRSFP,Percent of students who report being in a physical fight on school property in the past 12 months.,% of students,1 decimal place
+214,School safety,YRSAF,Number of students who report not going to school on one or more of the past 30 days because they felt they would be unsafe at school or on their way to or from school.,count of students,0 decimal places
+215,School safety rate,YRSAFP,Percent of students who report not go to school on one or more of the past 30 days because they felt they would be unsafe at school or on their way to or from school.,% of students,1 decimal place
+216,Self-care difficulty,DIY,Percent of residents reporting difficulty dressing or bathing.,% of residents,2 decimal places
+217,Serious psychological distress,HCSSPD,"Number of adults who reported serious psychological distress based on how often they felt nervous, hopeless, restless or fidgety, depressed, worthless, or that everything was an effort in the past 30 days.",count of adults,0 decimal places
+218,Serious psychological distress rate,HCSSPDP,"Percent of adults who reported serious psychological distress based on how often they felt nervous, hopeless, restless or fidgety, depressed, worthless, or that everything was an effort in the past 30 days.",% of adults,1 decimal place
+219,Severely rent-burdened,RBS,"Households spending more than 50% of income on rent are considered severely rent-burdened. Rent costs do not include utilities, insurance, or building fees.",% of renter-occupied housing units,2 decimal places
+220,Single-parent households,HTA,"Percentage of households that have children present and are headed by a single parent (mother or father), with no partner present.",% of households,2 decimal places
+221,Smoking during pregnancy,VRSMK,Number of births where the mother reported smoking any cigarettes during pregnancy.,count of births,0 decimal places
+222,Smoking during pregnancy rate,VRSMKP,Percent of births where the mother reported smoking any cigarettes during pregnancy.,% of births,1 decimal place
+223,Stroke mortality,VRST,Number of people who died due to stroke.,count of deaths,0 decimal places
+224,Stroke mortality rate,VRSTR,Age-adjusted rate of people who died due to stroke.,"per 100,000 population",1 decimal place
+225,Suicide mortality,VRSU,Number of people who died due to suicide.,count of deaths,0 decimal places
+226,Suicide mortality rate,VRSUR,Age-adjusted rate of people who died due to suicide.,"per 100,000 population",1 decimal place
+227,Syphilis,STDSY,Individuals diagnosed with primary or secondary syphilis infection.,count of individuals,0 decimal places
+228,Syphilis rate,STDSYR,"Individuals diagnosed with primary or secondary syphilis infection per 100,000 population.","per 100,000 population",1 decimal place
+229,Teen birth rate,VRTEENR,Rate of births where the mother is aged 15-19 years at time of delivery.,"per 1,000 population females aged 15-19 years",1 decimal place
+230,Teen births,VRTEEN,Number of births where the mother is aged 15-19 years at time of delivery.,count of births,0 decimal places
+231,Tobacco-related mortality,VRTO,Number of people who died due to diseases related to tobacco use or exposure.,count of deaths,0 decimal places
+232,Tobacco-related mortality rate,VRTOR,Age-adjusted rate of people who died due to diseases related to tobacco use or exposure.,"per 100,000 population",1 decimal place
+233,Total fertility rate,VRTFER,Average number of children a woman will potentially have.,"live births per 1,000 women",1 decimal place
+234,Traffic Crashes,TRC,Crashes on city streets under the jurisdiction of Chicago Police Department.,number of crashes,0 decimal places
+235,Traffic intensity,TRF,"A measure of proximity to vehicle traffic, defined as the annual average of the daily count of vehicles within 500 meters, divided by their distance in meters. Higher values indicate higher exposure to heavy traffic.",distance-weighted vehicles,0 decimal places
+236,Tuberculosis,CDTB,Individuals diagnosed with active tuberculosis disease.,count of individuals,0 decimal places
+237,Tuberculosis rate,CDTBR,"Individuals diagnosed with active tuberculosis disease per 100,000 population.","per 100,000 population",1 decimal place
+238,Twin birth rate,VRTWR,Rate of twin births.,"per 1,000 births",1 decimal place
+239,Twin births,VRTW,Number of twin births.,count of births,0 decimal places
+240,Unemployment rate,UMP,Percent of residents 16 and older in the civilian labor force who are actively seeking employment.,%,2 decimal places
+241,Uninsured rate,UNS,Percent of residents without health insurance (at the time of the survey).,% of residents,2 decimal places
+242,Uninsured residents,UNI,Number of residents without health insurance.,residents,0 decimal places
+243,Vacant,VAC,,% of housing units,2 decimal places
+244,Very low birthweight,VRVLB,Number of births with a birthweight less than 1500 grams (3.25 pounds).,count of births,0 decimal places
+245,Very low birthweight rate,VRVLBP,Percent of births with a birthweight less than 1500 grams (3.25 pounds).,% of births,1 decimal place
+246,Vision difficulty,DIU,Percent of residents reporting a vision difficulty.,% of residents,2 decimal places
+247,Years of Potential Life Lost (YPLL),YPLL,"Years of productive life lost per 100,000 population",,0 decimal places
+248,Youth binge drinking,YRBD,Number of students who report having 4 or more drinks of alcohol in a row (if female) or 5 or more drinks of alcohol in a row (if male) on one or more of the past 30 days.,count of students,1 decimal place
+249,Youth binge drinking rate,YRBDP,Percent of students who report having 4 or more drinks of alcohol in a row (if female) or 5 or more drinks of alcohol in a row (if male) on one or more of the past 30 days.,% of students,1 decimal place
+250,Youth condom use,YRCO,Number of students who reported using a condom the last time they had sex.,count of sexually active students,0 decimal places
+251,Youth condom use rate,YRCOP,Percent of students who reported using a condom the last time they had sex.,% of sexually active students,1 decimal place
+252,Youth depression,YRDE,Number of students who report feeling so sad or hopeless almost every day for two weeks or more in a row that they stopped doing some usual activities during the past 12 months.,count of students,0 decimal places
+253,Youth depression rate,YRDEP,Percent of students who report feeling so sad or hopeless almost every day for two weeks or more in a row that they stopped doing some usual activities during the past 12 months.,% of students,1 decimal place
+254,Youth e-cigarette use,YREC,Number of students who report using an electronic vapor product at least once during the past 30 days.,count of students,0 decimal places
+255,Youth e-cigarette use rate,YRECP,Percent of students who report using an electronic vapor product at least once during the past 30 days.,% of students,1 decimal place
+256,Youth fruit and vegetable servings,YRFV,Number of students who report eating fruits and vegetables five or more times per day during the past seven days.,count of students,0 decimal places
+257,Youth fruit and vegetable servings rate,YRFVP,Percent of students who report eating fruits and vegetables five or more times per day during the past seven days.,% of students,1 decimal place
+258,Youth physical activity,YRPA,Number of students who report being physically active for 60+ minutes for 7 of the past 7 days.,count of students,0 decimal places
+259,Youth physical activity rate,YRPAP,Percent of students who report being physically active for 60+ minutes  for all of the past 7 days.,% of students,1 decimal place
+260,Youth smoking,YRSMK,Number of students who report smoking cigarettes on one or more of the past 30 days.,count of students,0 decimal places
+261,Youth smoking rate,YRSMKP,Percent of students who report smoking cigarettes on one or more of the past 30 days.,% of students,1 decimal place
+262,Youth soda consumption,YRSO,"Number of students who report consuming one or more servings of soda or pop daily for the past 7 days.
+
+Numbers will not be displayed if the weighted number of respondents is less than 100.",count of students,0 decimal places
+263,Youth soda consumption rate,YRSOP,Percent of students who report consuming one or more servings of soda or pop daily for the past 7 days.,% of students,1 decimal place
+264,Youth suicide attempts,YRSU,Number of students who made a suicide attempt in the past year that needed to be treated by a doctor or nurse.,count of students,0 decimal places
+265,Youth suicide attempts rate,YRSUP,Percent of students who made a suicide attempt in the past year that needed to be treated by a doctor or nurse.,% of students,1 decimal place
