@@ -67,15 +67,29 @@ def get_crime_data():
 
 def concatenate_csv():
     df = pd.read_csv('crime_2019.csv')
-    for year, id in crime_dic.items():
+    for year in crime_dic.keys():
         if year != 'crime_2019':
             next_df = pd.read_csv(f'{year}.csv')
             df = pd.concat([df,next_df],axis=0)
     return df
 
 
+def getting_rolling_data():
+    df = pd.read_csv('total_crime.csv')
+    df = df.rename(columns={'0':'crime_num'})
 
+    #2015-2019
+    df_2019 = df[df['year'] != 2019]
+    df_2019 = df_2019.groupby(['community_area']).mean().reset_index()
+    df_2019.loc[:,'year'] = '2015-2019'
 
+    #2014-2018
+    df_2018 = df[df['year'] != 2018]
+    df_2018 = df_2019.groupby(['community_area']).mean().reset_index()
+    df_2018.loc[:,'year'] = '2014-2018'
 
+    #Concatenate two dataframes
+    df_total = pd.concat([df_2019,df_2018],axis=0)
+    df_total.to_csv('rolling_total_crime.csv', index=False)
 
 
