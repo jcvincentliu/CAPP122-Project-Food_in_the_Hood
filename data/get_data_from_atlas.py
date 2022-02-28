@@ -49,13 +49,10 @@ def key_to_row(df):
         name_list.append(row['key'])
     name_list = list(set(name_list))
 
-    df_result = (
-        df.groupby(['geo_id_label', 'period'])
-        .apply(lambda x: x.set_index('key').reindex(name_list)['data_value'])
-        .reset_index()
-        .rename_axis(None, axis=1))
+    df2 = pd.pivot(df, index=['geo_id_label', 'period'], columns='key', values='data_value')
+    df2 = df2[name_list].reset_index()
     
-    return df_result
+    return df2
 
 
 def create_key_name_dic():
