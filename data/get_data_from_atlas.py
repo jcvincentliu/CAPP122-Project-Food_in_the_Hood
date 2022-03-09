@@ -87,6 +87,49 @@ def get_atlas_population():
     df.to_csv('total_population.csv', index=False)
 
 
+def get_atlas_food():
+    period_dic = {"HCSFVP":"2016-2018",
+                  "HCSSP":"2016-2018",
+                  "LFA":"2019",
+                  "POV":"2015-2019"}
+    
+    for key, period in period_dic.items():
+        params = {"topic":key, "population":"", "period":period, "layer":"neighborhood"}
+        url = "https://chicagohealthatlas.org/api/v1/data"
+        data = requests.get(url, params=params)
+        results = data.json()["results"]
+        df = append_results(results)
+        
+        df = df.loc[:,['geo_id_label','data_value']]
+        if key == 'HCSFVP':
+            df = df.rename(columns={'data_value': 'adult_fruit_and_vegetable_servings_rate'})
+        elif key == 'HCSSP':
+            df = df.rename(columns={'data_value': 'adult_soda_consumption_rate'})
+        elif key == 'LFA':
+            df = df.rename(columns={'data_value': 'low_food_access'})
+        elif key == 'POV':
+            df = df.rename(columns={'data_value': 'poverty_rate'})
+
+        df['geo_id_label'] = df['geo_id_label'].str.replace('1714000-','')
+        df = df.rename(columns={'geo_id_label': 'community_area'})
+        #df = df.rename(columns={'period': 'year'})
+        df.to_csv(f'{key}.csv', index=False)
+
+    df = pd.read_csv('HCSFVP.csv')
+    for key in period_dic.keys():
+        d_next = pd.read_csv(f'{key}.csv')
+        if key != 'HCSFVP':
+            df_next = pd.read_csv(f'{key}.csv')
+            df = pd.merge(df, df_next ,on=['community_area'], how='left')
+    
+    df_crime = pd.read_csv('crime_rate.csv')
+    df_crime = df_crime[df_crime['year'] == '2015-2019']
+    df_crime = df_crime.loc[:,['community_area','crime_rate', 'population']]
+    
+    df = pd.merge(df, df_crime ,on=['community_area'], how='left')
+    df.to_csv('food_data.csv', index=False)
+
+
 def append_results(results):
     cols = ['key', 'period', 'data_value', 'geo_layer', 'geo_id_label', 'population', 'std_error']
     df = pd.DataFrame(columns = cols)
@@ -155,4 +198,4 @@ def concatenating_datasets():
     df_concatenate = pd.merge(df_atlas, df_merge ,on=['community_area','year'], how='left')
     df_concatenate = df_concatenate.sort_values(['community_area', 'year'], ignore_index=True)
 
-    df_concatenate.to_csv("food_and_hood_data.csv", index=False)
+    df_concatenate.to_csv("crime_rate.csv", index=False)
