@@ -76,10 +76,9 @@ content = html.Div(
                         html.P(id='bar-title',
                                 className='font-weight-bold'),
                         dcc.Graph(id="bar-chart",
-                                className='bg-light')])],
-            style={'height': '30vh',
-                   'margin-top': '16px', 'margin-left': '8px',
-                   'margin-bottom': '8px', 'margin-right': '8px'}),
+                                className='bg-light')])
+            ],
+            style={'height': '50vh'}),
         dbc.Row(
             [
                 dbc.Col([
@@ -89,16 +88,15 @@ content = html.Div(
                         figure=fig_corr,
                         className='bg-light')])
             ],
-            style={'height': '30vh',
-                   'margin-top': '16px', 'margin-left': '8px',
-                   'margin-bottom': '8px', 'margin-right': '8px'}),
+            style={'height': '50vh'}
+            ),
         dbc.Row(
             [
                 dbc.Col([
                     html.P('Map of Chicago Neighborhood',
                         className='font-weight-bold')])
             ],
-            style={'height': '40vh', 'margin': '8px'})
+            style={'height': '100vh', 'margin': '8px'})
         ]
     )
 
@@ -148,43 +146,5 @@ def update_bar(n_clicks, cat_pick):
     return fig_bar, title_bar
 
 
-# Chloropleth
-@app.callback(Output('bar-chart', 'figure'),
-              Output('bar-title', 'children'),
-              Input('my-button', 'n_clicks'),
-              State('my-cat-picker', 'value'))
-
-def display_choropleth(n_clicks, cat_pick):
-    CENTER = {'lat': 41.8781, 'lon': -87.6298}
-    chi2 = preprocess_choro('data/chicago_community_areas.geojson', 'data/poverty_and_crime.csv')
-    fig = px.choropleth_mapbox(chi2, geojson=json.loads(chi2['geometry'].to_json()), 
-        locations='community_area_ID', color=indicator,
-        #title = 'unemployment rate',
-        hover_name = 'community_area_name_x',
-        color_continuous_scale="OrRd", 
-        mapbox_style='white-bg',
-        zoom=9, 
-        center=CENTER,
-        opacity=0.5,
-        #labels={'unemployment':'unemp_rate'}
-        )
-    fig.update_geos(fitbounds="locations", visible=False)
-    #fig.update_layout(margin={'r':20,'t':40,'l':20,'b':10,'pad':5})
-    fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-    return fig
-
-def preprocess_choro(path_to_geojson, path_to_csv):
-    chi = gpd.read_file(path_to_geojson)
-    chi = chi.rename(columns={'area_num_1': 'community_area_ID', 'community' : 'community_area_name'})
-    df = pd.read_csv(path_to_csv)
-    df['community_area'] = df['community_area'].astype(str)
-    df = df.rename(columns={'community_area': 'community_area_ID'})
-    df['community_area_name'] = df['community_area_name'].str.upper()
-    chi2 = pd.merge(chi, df, on=['community_area_ID'])
-    chi2.set_index('community_area_ID', drop=False, inplace=True)
-    
-    return chi2
-
-
 if __name__ == "__main__":
-    app.run_server(host='127.0.0.1',port=8700)
+    app.run_server(host='127.0.0.1',port=8600)
