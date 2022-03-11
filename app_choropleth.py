@@ -6,7 +6,6 @@ import json
 
 app = Dash(__name__)
 
-
 app.layout = html.Div([
     html.H4('Choropleth by neighborhood'),
     html.P("Select an indicator:"),
@@ -26,7 +25,7 @@ app.layout = html.Div([
 
 def display_choropleth(indicator):
     CENTER = {'lat': 41.8781, 'lon': -87.6298}
-    chi2 = preprocess_choro('chicago_community_areas.geojson', 'poverty_and_crime.csv')
+    chi2 = preprocess_choro('data/chicago_community_areas.geojson', 'data/poverty_and_crime.csv')
     fig = px.choropleth_mapbox(chi2, geojson=json.loads(chi2['geometry'].to_json()), 
         locations='community_area_ID', color=indicator,
         #title = 'unemployment rate',
