@@ -122,11 +122,19 @@ def get_atlas_food():
             df_next = pd.read_csv(f'{key}.csv')
             df = pd.merge(df, df_next ,on=['community_area'], how='left')
     
+    #Merge crime rate
     df_crime = pd.read_csv('crime_rate.csv')
     df_crime = df_crime[df_crime['year'] == '2015-2019']
     df_crime = df_crime.loc[:,['community_area','crime_rate', 'population']]
     
     df = pd.merge(df, df_crime ,on=['community_area'], how='left')
+
+    #Merge community area name
+    df_name = pd.read_csv('poverty_and_crime.csv')
+    df_name = df_name.loc[:,['community_area','community_area_name']]
+
+    df = pd.merge(df, df_name ,on=['community_area'], how='left')
+
     df.to_csv('food_data.csv', index=False)
 
 
