@@ -16,13 +16,12 @@ if [[ ! -d env ]]; then
     exit 1
 fi
 
-# 4. Install Requirements
+# 2. Install Requirements
 
 echo -e "4. Installing Requirements..."
-if [[ ! -e "requirements.txt" ]]; then
-    echo -e "\t--Need to requirements.txt to install packages."
-    exit 1
-fi
+
 
 source env/bin/activate
 pip install -r requirements.txt
+
+source env/bin/activate
