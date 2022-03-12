@@ -1,4 +1,5 @@
 import dash
+from matplotlib.pyplot import figure
 import dash_bootstrap_components as dbc
 import dash_html_components as html
 import dash_core_components as dcc
@@ -36,7 +37,6 @@ fig_corr.update_layout(width=1040,
                        margin=dict(l=40, r=20, t=20, b=20),
                        paper_bgcolor='rgba(0,0,0,0)'
                        )
-
 
 sidebar = html.Div(
     [
@@ -98,7 +98,8 @@ content = html.Div(
                 dbc.Col([
                     html.P('Map of Chicago Neighborhood',
                         className='font-weight-bold'),
-                        dcc.Graph(id="choropleth")])
+                        dcc.Graph(id="choropleth"),
+                        ])
             ],
             style={'height': '100vh', 'margin': '8px'})
         ]
@@ -117,7 +118,90 @@ app.layout = dbc.Container(
     )
 
 
+"""
+sidebar = html.Div(
+    [
+        dbc.Row(
+            [
+                html.H5('Food insecurity',
+                        style={'margin-top': '12px', 'margin-left': '24px'})
+                ],
+            style={"height": "5vh"},
+            className='bg-primary text-white font-italic'
+            ),
+        dbc.Row(
+            [
+                html.Div([
+                    html.P('Variables',
+                           style={'margin-top': '8px', 'margin-bottom': '4px'},
+                           className='font-weight-bold'),
+                    dcc.Dropdown(id='catpick', multi=False, value='adult_fruit_and_vegetable_servings_rate',
+                                 options=[{'label': x, 'value':x}
+                                          for x in vars],
+                                 style={'width': '220px'}
+                                 ),
+                    html.Button(id='my-button', n_clicks=0, children='apply',
+                                style={'margin-top': '16px'},
+                                className='bg-dark text-white'),
+                    html.Hr()
+                    ]
+                    )
+                ],
+            style={'height': '50vh', 'margin': '8px'})
+        ]
+    )
+
+content = html.Div(
+    [
+        dbc.Row(
+            [
+                dbc.Col(
+                    [
+                        html.P(id='bar-title',
+                                className='font-weight-bold'),
+                        dcc.Graph(id="bar-chart",
+                                className='bg-light')])
+            ],
+            style={'height': '50vh'}),
+        dbc.Row(
+            [
+                dbc.Col([
+                    html.P('Correlation Matrix Heatmap',
+                        className='font-weight-bold'),
+                    dcc.Graph(id='corr_chart',
+                        figure=fig_corr,
+                        className='bg-light')])
+            ],
+            style={'height': '50vh'}
+            ),
+        dbc.Row(
+            [
+                dbc.Col([
+                    html.P('Map of Chicago Neighborhood',
+                        className='font-weight-bold'),
+                        dcc.Graph(id="choropleth"),
+                        ])
+            ],
+            style={'height': '100vh', 'margin': '8px'})
+        ]
+    )
+
+app.layout = dbc.Container(
+    [
+        dbc.Row(
+            [
+                dbc.Col(sidebar, width=3, className='bg-light'),
+                dbc.Col(content, width=9)
+                ]
+            ),
+        ],
+    fluid=True
+    )
+"""
+
+
 # Bar Chart
+
 @app.callback(Output('bar-chart', 'figure'),
               Output('bar-title', 'children'),
               Input('my-button', 'n_clicks'),
@@ -156,9 +240,10 @@ def update_bar(n_clicks, cat_pick):
               State('catpick', 'value'))
 
 
-def display_choropleth(catpick):
+def display_choropleth(n_clicks, catpick):
     CENTER = {'lat': 41.8781, 'lon': -87.6298}
     chi2 = preprocess_choro('../data/chicago_community_areas.geojson', '../data/food_data.csv')
+    print(chi2)
     fig = px.choropleth_mapbox(chi2, geojson=json.loads(chi2['geometry'].to_json()), 
         locations='community_area_ID', color= catpick,
         #title = 'unemployment rate',
