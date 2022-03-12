@@ -31,7 +31,7 @@ def go():
 
     #build results dict
     results_dict = {}
-    results_dict["all variables"] = match_rate_all
+    results_dict['all variables'] = match_rate_all
 
     #classify testing data - excluding one variable each iteration
     column_list = create_col_list(training_set)
@@ -44,7 +44,7 @@ def go():
         result_lst = [None] * testing_set_copy.shape[0]
         result_lst2 = classify_data(decision_tree, testing_set_copy, result_lst)
         results_dict[col] = calculate_match(testing_set_copy['crime_rate'], result_lst2)
-        
+
     return results_dict
 
 def process_data():
@@ -348,7 +348,3 @@ class Node(object):
         '''
         self.out_edges.append(string)
 
-
-if __name__ == "__main__":
-    app.run
-   
