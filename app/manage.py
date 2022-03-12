@@ -118,12 +118,11 @@ app.layout = dbc.Container(
 
 
 # Bar Chart
-@app.callback(#Output('bar-chart', 'figure'),
+@app.callback(Output('bar-chart', 'figure'),
               Output('bar-title', 'children'),
-              Output("choropleth", 'figure'), 
               Input('my-button', 'n_clicks'),
               State('catpick', 'value'))
-              #Input('indicator', 'value'))
+
 
 def update_bar(n_clicks, cat_pick):
     df_bar = df[cat_pick]
@@ -150,6 +149,11 @@ def update_bar(n_clicks, cat_pick):
     title_bar = 'Distribution of Categorical Variable: ' + cat_pick
 
     return fig_bar, title_bar
+
+
+@app.callback(Output("choropleth", 'figure'), 
+              Input('my-button', 'n_clicks'),
+              State('catpick', 'value'))
 
 
 def display_choropleth(catpick):
