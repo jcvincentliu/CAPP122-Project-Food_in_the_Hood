@@ -18,7 +18,7 @@ fi
 
 # 2. Install Requirements
 
-echo -e "4. Installing Requirements..."
+echo -e "2. Installing Requirements..."
 
 
 source env/bin/activate
