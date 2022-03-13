@@ -2,9 +2,9 @@
 
 # Contents
 
-App Folder
-    - manage.py - script for creating dash dahsboard visualization
-    - decision_tree.py - script for analyzing data using a decision tree classification model
+App Folder \n
+    - manage.py - script for creating dash dahsboard visualization\n
+    - decision_tree.py - script for analyzing data using a decision tree classification model\n
 
 Data Folder
     - get_data_from_atlas.py - script for getting data from Chicago Health Atlas
