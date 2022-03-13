@@ -10,7 +10,8 @@ import math
 from random import seed
 from random import choice
 
-def go():
+
+def classification_results():
     '''
     Function for data processing, building model, and testing model
     '''
@@ -47,6 +48,7 @@ def go():
 
     return results_dict
 
+
 def process_data():
     '''
     Loads and processes data creating a dataframe with categorized variables, training data, and testing data
@@ -65,9 +67,9 @@ def process_data():
     community_id = df["community_area"]
     cat_series.append(community_id)
     for column in df.columns:
-        if column != "community_area":
-            cat = pd.cut(df[column], 5, labels = ['Very Low', 'Low', 'Medium', ' High', 'Very High'])
-            cat_series.append(cat)
+         if (column != "community_area") and (column != "community_area_name"):
+             cat = pd.cut(df[column], 5, labels = ['Very Low', 'Low', 'Medium', ' High', 'Very High'])
+             cat_series.append(cat)
     
     df_cat = pd.concat(cat_series, axis =1)
 
@@ -205,7 +207,7 @@ def create_col_list(df):
         column_list: set of attribute column names
     '''
     
-    col_list = [col for col in df.columns if col != 'crime_rate' and col != 'community_area']
+    col_list = [col for col in df.columns if col != 'crime_rate' and col != 'community_area' and col != 'community_area_name']
 
     return col_list
 
@@ -347,4 +349,7 @@ class Node(object):
             updates node.out_edges attribute
         '''
         self.out_edges.append(string)
+
+if __name__ == "__main__":
+    print(classification_results())
 
