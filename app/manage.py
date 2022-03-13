@@ -14,8 +14,21 @@ from dash.dependencies import Input, Output, State
 
 
 df = pd.read_csv('../data/food_data.csv')
-vars = [var for var in df.columns if var != 'community_area']
+vars = [var for var in df.columns if not var in ['community_area','community_area_name']]
 app = dash.Dash(external_stylesheets=[dbc.themes.FLATLY])
+
+dic = {'adult_fruit_and_vegetable_servings_rate':'Percent of adults who reported \
+            eating five or more servings of fruits and vegetables (combined) daily.',
+        'adult_soda_consumption_rate':'Percent of adults who drank soda or pop or other \
+            sweetened drinks like sweetened iced tea, sports drinks, fruit punch or other \
+            fruit-flavored drinks at least once per day in the past month.',
+        'low_food_access':'Percent of residents who have low access to food, defined solely \
+            by distance: further than 1/2 mile from the nearest supermarket in an urban area, \
+            or further than 10 miles in a rural area.',
+        'poverty_rate':'Percent of residents in families that are in poverty \
+            (below the Federal Poverty Level).',
+        'crime_rate':'The number of all crimes per 10,000 people over the time period',
+        'population':'Average population over the time period.'}
 
 # Heatmap
 corr_pick = vars
@@ -66,7 +79,15 @@ sidebar = html.Div(
                     ]
                     )
                 ],
-            style={'height': '50vh', 'margin': '8px'})
+            style={'height': '30vh', 'margin': '8px'}),
+        dbc.Row(
+            [
+                html.P('What is the variable?'),
+                html.P(id='explanation',
+                        className='font-weight-bold')
+                ],
+            style={"height": "45vh"}
+            )
         ]
     )
 
@@ -85,84 +106,12 @@ content = html.Div(
         dbc.Row(
             [
                 dbc.Col([
-                    html.P('Correlation Matrix Heatmap',
-                        className='font-weight-bold'),
-                    dcc.Graph(id='corr_chart',
-                        figure=fig_corr,
-                        className='bg-light')])
-            ],
-            style={'height': '50vh'}
-            ),
-        dbc.Row(
-            [
-                dbc.Col([
                     html.P('Map of Chicago Neighborhood',
                         className='font-weight-bold'),
-                        dcc.Graph(id="choropleth"),
-                        ])
-            ],
-            style={'height': '100vh', 'margin': '8px'})
-        ]
-    )
-
-app.layout = dbc.Container(
-    [
-        dbc.Row(
-            [
-                dbc.Col(sidebar, width=3, className='bg-light'),
-                dbc.Col(content, width=9)
-                ]
-            ),
-        ],
-    fluid=True
-    )
-
-
-"""
-sidebar = html.Div(
-    [
-        dbc.Row(
-            [
-                html.H5('Food insecurity',
-                        style={'margin-top': '12px', 'margin-left': '24px'})
-                ],
-            style={"height": "5vh"},
-            className='bg-primary text-white font-italic'
-            ),
-        dbc.Row(
-            [
-                html.Div([
-                    html.P('Variables',
-                           style={'margin-top': '8px', 'margin-bottom': '4px'},
-                           className='font-weight-bold'),
-                    dcc.Dropdown(id='catpick', multi=False, value='adult_fruit_and_vegetable_servings_rate',
-                                 options=[{'label': x, 'value':x}
-                                          for x in vars],
-                                 style={'width': '220px'}
-                                 ),
-                    html.Button(id='my-button', n_clicks=0, children='apply',
-                                style={'margin-top': '16px'},
-                                className='bg-dark text-white'),
-                    html.Hr()
-                    ]
-                    )
-                ],
-            style={'height': '50vh', 'margin': '8px'})
-        ]
-    )
-
-content = html.Div(
-    [
-        dbc.Row(
-            [
-                dbc.Col(
-                    [
-                        html.P(id='bar-title',
-                                className='font-weight-bold'),
-                        dcc.Graph(id="bar-chart",
+                        dcc.Graph(id="choropleth",
                                 className='bg-light')])
             ],
-            style={'height': '50vh'}),
+            style={'height': '80vh', 'margin': '8px'}),
         dbc.Row(
             [
                 dbc.Col([
@@ -173,16 +122,7 @@ content = html.Div(
                         className='bg-light')])
             ],
             style={'height': '50vh'}
-            ),
-        dbc.Row(
-            [
-                dbc.Col([
-                    html.P('Map of Chicago Neighborhood',
-                        className='font-weight-bold'),
-                        dcc.Graph(id="choropleth"),
-                        ])
-            ],
-            style={'height': '100vh', 'margin': '8px'})
+            )
         ]
     )
 
@@ -197,16 +137,22 @@ app.layout = dbc.Container(
         ],
     fluid=True
     )
-"""
+
+# Definition of variables
+@app.callback(Output("explanation", 'children'), 
+              Input('my-button', 'n_clicks'),
+              State('catpick', 'value'))
+
+def update_explanation(n_clicks, cat_pick):
+    explanation = dic[cat_pick]
+    return explanation
 
 
 # Bar Chart
-
 @app.callback(Output('bar-chart', 'figure'),
               Output('bar-title', 'children'),
               Input('my-button', 'n_clicks'),
               State('catpick', 'value'))
-
 
 def update_bar(n_clicks, cat_pick):
     df_bar = df[cat_pick]
@@ -230,11 +176,11 @@ def update_bar(n_clicks, cat_pick):
             x=1
         )
     )
-    title_bar = 'Distribution of Categorical Variable: ' + cat_pick
+    title_bar = 'Bar chart: ' + cat_pick
 
     return fig_bar, title_bar
 
-
+# Choropleth
 @app.callback(Output("choropleth", 'figure'), 
               Input('my-button', 'n_clicks'),
               State('catpick', 'value'))
@@ -246,17 +192,14 @@ def display_choropleth(n_clicks, catpick):
     print(chi2)
     fig = px.choropleth_mapbox(chi2, geojson=json.loads(chi2['geometry'].to_json()), 
         locations='community_area_ID', color= catpick,
-        #title = 'unemployment rate',
         hover_name = 'community_area_name_x',
         color_continuous_scale="OrRd", 
         mapbox_style='white-bg',
         zoom=9, 
         center=CENTER,
         opacity=0.5,
-        #labels={'unemployment':'unemp_rate'}
         )
     fig.update_geos(fitbounds="locations", visible=False)
-    #fig.update_layout(margin={'r':20,'t':40,'l':20,'b':10,'pad':5})
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     return fig
 
