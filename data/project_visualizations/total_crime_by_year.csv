@@ -1,0 +1,463 @@
+,community_area,year,Crime Number,community_area_name
+0,1,2019,4053,Rogers Park
+1,1,2018,3842,Rogers Park
+2,1,2017,4162,Rogers Park
+3,1,2016,3674,Rogers Park
+4,1,2015,3598,Rogers Park
+5,1,2014,3808,Rogers Park
+6,10,2019,1163,Norwood Park
+7,10,2018,1182,Norwood Park
+8,10,2017,1108,Norwood Park
+9,10,2016,1323,Norwood Park
+10,10,2015,1280,Norwood Park
+11,10,2014,1255,Norwood Park
+12,11,2019,970,Jefferson Park
+13,11,2018,1105,Jefferson Park
+14,11,2017,1064,Jefferson Park
+15,11,2016,1074,Jefferson Park
+16,11,2015,1158,Jefferson Park
+17,11,2014,1233,Jefferson Park
+18,12,2019,463,Forest Glen
+19,12,2018,496,Forest Glen
+20,12,2017,551,Forest Glen
+21,12,2016,574,Forest Glen
+22,12,2015,451,Forest Glen
+23,12,2014,462,Forest Glen
+24,13,2019,796,North Park
+25,13,2018,1003,North Park
+26,13,2017,968,North Park
+27,13,2016,974,North Park
+28,13,2015,844,North Park
+29,13,2014,873,North Park
+30,14,2019,2218,Albany Park
+31,14,2018,2437,Albany Park
+32,14,2017,2486,Albany Park
+33,14,2016,2421,Albany Park
+34,14,2015,2541,Albany Park
+35,14,2014,2405,Albany Park
+36,15,2019,2900,Portage Park
+37,15,2018,3228,Portage Park
+38,15,2017,3379,Portage Park
+39,15,2016,3266,Portage Park
+40,15,2015,3460,Portage Park
+41,15,2014,3395,Portage Park
+42,16,2019,2540,Irving Park
+43,16,2018,2840,Irving Park
+44,16,2017,3018,Irving Park
+45,16,2016,3002,Irving Park
+46,16,2015,3022,Irving Park
+47,16,2014,2855,Irving Park
+48,17,2019,1337,Dunning
+49,17,2018,1514,Dunning
+50,17,2017,1522,Dunning
+51,17,2016,1757,Dunning
+52,17,2015,1661,Dunning
+53,17,2014,1572,Dunning
+54,18,2019,553,Montclaire
+55,18,2018,606,Montclaire
+56,18,2017,609,Montclaire
+57,18,2016,673,Montclaire
+58,18,2015,588,Montclaire
+59,18,2014,526,Montclaire
+60,19,2019,4361,Belmont Cragin
+61,19,2018,4407,Belmont Cragin
+62,19,2017,4620,Belmont Cragin
+63,19,2016,4790,Belmont Cragin
+64,19,2015,4849,Belmont Cragin
+65,19,2014,4980,Belmont Cragin
+66,2,2019,3474,West Ridge
+67,2,2018,3547,West Ridge
+68,2,2017,3603,West Ridge
+69,2,2016,3296,West Ridge
+70,2,2015,3120,West Ridge
+71,2,2014,3417,West Ridge
+72,20,2019,1301,Hermosa
+73,20,2018,1409,Hermosa
+74,20,2017,1508,Hermosa
+75,20,2016,1563,Hermosa
+76,20,2015,1738,Hermosa
+77,20,2014,1794,Hermosa
+78,21,2019,2147,Avondale
+79,21,2018,2348,Avondale
+80,21,2017,2357,Avondale
+81,21,2016,2297,Avondale
+82,21,2015,2263,Avondale
+83,21,2014,2373,Avondale
+84,22,2019,4891,Logan Square
+85,22,2018,4960,Logan Square
+86,22,2017,5085,Logan Square
+87,22,2016,5477,Logan Square
+88,22,2015,4810,Logan Square
+89,22,2014,5108,Logan Square
+90,23,2019,8010,Humboldt Park
+91,23,2018,8123,Humboldt Park
+92,23,2017,8081,Humboldt Park
+93,23,2016,8038,Humboldt Park
+94,23,2015,8206,Humboldt Park
+95,23,2014,9236,Humboldt Park
+96,24,2019,7295,West Town
+97,24,2018,7338,West Town
+98,24,2017,8347,West Town
+99,24,2016,8253,West Town
+100,24,2015,7091,West Town
+101,24,2014,7351,West Town
+102,25,2019,14764,Austin
+103,25,2018,15180,Austin
+104,25,2017,15454,Austin
+105,25,2016,16793,Austin
+106,25,2015,17424,Austin
+107,25,2014,18809,Austin
+108,26,2019,6224,West Garfield Park
+109,26,2018,5737,West Garfield Park
+110,26,2017,5380,West Garfield Park
+111,26,2016,5793,West Garfield Park
+112,26,2015,6039,West Garfield Park
+113,26,2014,6229,West Garfield Park
+114,27,2019,4654,East Garfield Park
+115,27,2018,4943,East Garfield Park
+116,27,2017,4780,East Garfield Park
+117,27,2016,5052,East Garfield Park
+118,27,2015,5466,East Garfield Park
+119,27,2014,5822,East Garfield Park
+120,28,2019,9363,Near West Side
+121,28,2018,9466,Near West Side
+122,28,2017,9075,Near West Side
+123,28,2016,9486,Near West Side
+124,28,2015,7961,Near West Side
+125,28,2014,7908,Near West Side
+126,29,2019,9009,North Lawndale
+127,29,2018,9452,North Lawndale
+128,29,2017,9095,North Lawndale
+129,29,2016,8827,North Lawndale
+130,29,2015,8440,North Lawndale
+131,29,2014,8728,North Lawndale
+132,3,2019,3365,Uptown
+133,3,2018,3664,Uptown
+134,3,2017,3569,Uptown
+135,3,2016,3572,Uptown
+136,3,2015,3668,Uptown
+137,3,2014,3821,Uptown
+138,30,2019,4446,South Lawndale
+139,30,2018,4575,South Lawndale
+140,30,2017,4559,South Lawndale
+141,30,2016,4711,South Lawndale
+142,30,2015,4464,South Lawndale
+143,30,2014,4783,South Lawndale
+144,31,2019,2340,Lower West Side
+145,31,2018,2401,Lower West Side
+146,31,2017,2635,Lower West Side
+147,31,2016,2633,Lower West Side
+148,31,2015,2534,Lower West Side
+149,31,2014,2715,Lower West Side
+150,32,2019,10597,Loop
+151,32,2018,10893,Loop
+152,32,2017,10636,Loop
+153,32,2016,9040,Loop
+154,32,2015,7601,Loop
+155,32,2014,7295,Loop
+156,33,2019,1869,Near South Side
+157,33,2018,1886,Near South Side
+158,33,2017,1952,Near South Side
+159,33,2016,1951,Near South Side
+160,33,2015,1885,Near South Side
+161,33,2014,1783,Near South Side
+162,34,2019,1024,Armour Square
+163,34,2018,1022,Armour Square
+164,34,2017,1019,Armour Square
+165,34,2016,1012,Armour Square
+166,34,2015,1085,Armour Square
+167,34,2014,1225,Armour Square
+168,35,2019,2745,Douglas
+169,35,2018,2731,Douglas
+170,35,2017,2638,Douglas
+171,35,2016,2623,Douglas
+172,35,2015,2530,Douglas
+173,35,2014,2574,Douglas
+174,36,2019,637,Oakland
+175,36,2018,680,Oakland
+176,36,2017,691,Oakland
+177,36,2016,702,Oakland
+178,36,2015,636,Oakland
+179,36,2014,647,Oakland
+180,37,2019,906,Fuller Park
+181,37,2018,836,Fuller Park
+182,37,2017,880,Fuller Park
+183,37,2016,930,Fuller Park
+184,37,2015,844,Fuller Park
+185,37,2014,933,Fuller Park
+186,38,2019,3394,Grand Boulevard
+187,38,2018,3267,Grand Boulevard
+188,38,2017,3468,Grand Boulevard
+189,38,2016,3318,Grand Boulevard
+190,38,2015,3160,Grand Boulevard
+191,38,2014,3513,Grand Boulevard
+192,39,2019,1390,Kenwood
+193,39,2018,1473,Kenwood
+194,39,2017,1537,Kenwood
+195,39,2016,1421,Kenwood
+196,39,2015,1380,Kenwood
+197,39,2014,1504,Kenwood
+198,4,2019,1804,Lincoln Square
+199,4,2018,1944,Lincoln Square
+200,4,2017,2010,Lincoln Square
+201,4,2016,1990,Lincoln Square
+202,4,2015,1771,Lincoln Square
+203,4,2014,1900,Lincoln Square
+204,40,2019,2342,Washington Park
+205,40,2018,2821,Washington Park
+206,40,2017,2736,Washington Park
+207,40,2016,2713,Washington Park
+208,40,2015,2776,Washington Park
+209,40,2014,2948,Washington Park
+210,41,2019,1727,Hyde Park
+211,41,2018,1971,Hyde Park
+212,41,2017,1729,Hyde Park
+213,41,2016,1765,Hyde Park
+214,41,2015,1521,Hyde Park
+215,41,2014,1423,Hyde Park
+216,42,2019,3562,Woodlawn
+217,42,2018,3505,Woodlawn
+218,42,2017,3859,Woodlawn
+219,42,2016,3630,Woodlawn
+220,42,2015,3760,Woodlawn
+221,42,2014,4199,Woodlawn
+222,43,2019,8672,South Shore
+223,43,2018,8705,South Shore
+224,43,2017,8708,South Shore
+225,43,2016,8220,South Shore
+226,43,2015,9123,South Shore
+227,43,2014,9298,South Shore
+228,44,2019,6799,Chatham
+229,44,2018,6546,Chatham
+230,44,2017,6417,Chatham
+231,44,2016,6268,Chatham
+232,44,2015,6061,Chatham
+233,44,2014,6280,Chatham
+234,45,2019,1303,Avalon Park
+235,45,2018,1168,Avalon Park
+236,45,2017,1288,Avalon Park
+237,45,2016,1316,Avalon Park
+238,45,2015,1393,Avalon Park
+239,45,2014,1503,Avalon Park
+240,46,2019,4258,South Chicago
+241,46,2018,4338,South Chicago
+242,46,2017,4592,South Chicago
+243,46,2016,4802,South Chicago
+244,46,2015,5095,South Chicago
+245,46,2014,5252,South Chicago
+246,47,2019,375,Burnside
+247,47,2018,388,Burnside
+248,47,2017,374,Burnside
+249,47,2016,400,Burnside
+250,47,2015,389,Burnside
+251,47,2014,403,Burnside
+252,48,2019,1433,Calumet Heights
+253,48,2018,1401,Calumet Heights
+254,48,2017,1370,Calumet Heights
+255,48,2016,1420,Calumet Heights
+256,48,2015,1488,Calumet Heights
+257,48,2014,1592,Calumet Heights
+258,49,2019,6542,Roseland
+259,49,2018,6963,Roseland
+260,49,2017,6974,Roseland
+261,49,2016,6893,Roseland
+262,49,2015,6656,Roseland
+263,49,2014,7399,Roseland
+264,5,2019,1275,North Center
+265,5,2018,1340,North Center
+266,5,2017,1429,North Center
+267,5,2016,1407,North Center
+268,5,2015,1395,North Center
+269,5,2014,1543,North Center
+270,50,2019,1162,Pullman
+271,50,2018,1211,Pullman
+272,50,2017,1099,Pullman
+273,50,2016,1213,Pullman
+274,50,2015,1049,Pullman
+275,50,2014,1222,Pullman
+276,51,2019,1851,South Deering
+277,51,2018,1755,South Deering
+278,51,2017,1758,South Deering
+279,51,2016,1890,South Deering
+280,51,2015,1928,South Deering
+281,51,2014,2257,South Deering
+282,52,2019,1003,East Side
+283,52,2018,1109,East Side
+284,52,2017,1219,East Side
+285,52,2016,1334,East Side
+286,52,2015,1322,East Side
+287,52,2014,1391,East Side
+288,53,2019,3860,West Pullman
+289,53,2018,4086,West Pullman
+290,53,2017,4002,West Pullman
+291,53,2016,3897,West Pullman
+292,53,2015,4025,West Pullman
+293,53,2014,4381,West Pullman
+294,54,2019,1396,Riverdale
+295,54,2018,1363,Riverdale
+296,54,2017,1357,Riverdale
+297,54,2016,1278,Riverdale
+298,54,2015,1190,Riverdale
+299,54,2014,1387,Riverdale
+300,55,2019,496,Hegewisch
+301,55,2018,626,Hegewisch
+302,55,2017,674,Hegewisch
+303,55,2016,586,Hegewisch
+304,55,2015,516,Hegewisch
+305,55,2014,627,Hegewisch
+306,56,2019,1863,Garfield Ridge
+307,56,2018,2101,Garfield Ridge
+308,56,2017,1927,Garfield Ridge
+309,56,2016,2113,Garfield Ridge
+310,56,2015,1859,Garfield Ridge
+311,56,2014,1933,Garfield Ridge
+312,57,2019,811,Archer Heights
+313,57,2018,827,Archer Heights
+314,57,2017,850,Archer Heights
+315,57,2016,881,Archer Heights
+316,57,2015,1002,Archer Heights
+317,57,2014,1057,Archer Heights
+318,58,2019,2225,Brighton Park
+319,58,2018,2199,Brighton Park
+320,58,2017,2228,Brighton Park
+321,58,2016,2636,Brighton Park
+322,58,2015,2764,Brighton Park
+323,58,2014,2918,Brighton Park
+324,59,2019,826,McKinley Park
+325,59,2018,913,McKinley Park
+326,59,2017,1052,McKinley Park
+327,59,2016,1043,McKinley Park
+328,59,2015,1084,McKinley Park
+329,59,2014,1058,McKinley Park
+330,6,2019,5986,Lake View
+331,6,2018,5976,Lake View
+332,6,2017,5763,Lake View
+333,6,2016,6090,Lake View
+334,6,2015,5594,Lake View
+335,6,2014,5707,Lake View
+336,60,2019,1451,Bridgeport
+337,60,2018,1525,Bridgeport
+338,60,2017,1525,Bridgeport
+339,60,2016,1697,Bridgeport
+340,60,2015,1619,Bridgeport
+341,60,2014,1803,Bridgeport
+342,61,2019,4259,New City
+343,61,2018,4277,New City
+344,61,2017,4659,New City
+345,61,2016,4946,New City
+346,61,2015,5011,New City
+347,61,2014,5280,New City
+348,62,2019,902,West Elsdon
+349,62,2018,1019,West Elsdon
+350,62,2017,1022,West Elsdon
+351,62,2016,1100,West Elsdon
+352,62,2015,1037,West Elsdon
+353,62,2014,1016,West Elsdon
+354,63,2019,2160,Gage Park
+355,63,2018,2076,Gage Park
+356,63,2017,2312,Gage Park
+357,63,2016,2367,Gage Park
+358,63,2015,2372,Gage Park
+359,63,2014,2633,Gage Park
+360,64,2019,938,Clearing
+361,64,2018,971,Clearing
+362,64,2017,898,Clearing
+363,64,2016,970,Clearing
+364,64,2015,942,Clearing
+365,64,2014,1003,Clearing
+366,65,2019,1692,West Lawn
+367,65,2018,1785,West Lawn
+368,65,2017,1879,West Lawn
+369,65,2016,2145,West Lawn
+370,65,2015,2058,West Lawn
+371,65,2014,2110,West Lawn
+372,66,2019,5522,Chicago Lawn
+373,66,2018,5712,Chicago Lawn
+374,66,2017,5761,Chicago Lawn
+375,66,2016,5858,Chicago Lawn
+376,66,2015,6233,Chicago Lawn
+377,66,2014,6498,Chicago Lawn
+378,67,2019,6624,West Englewood
+379,67,2018,7131,West Englewood
+380,67,2017,6970,West Englewood
+381,67,2016,7012,West Englewood
+382,67,2015,7550,West Englewood
+383,67,2014,7619,West Englewood
+384,68,2019,6035,Englewood
+385,68,2018,6255,Englewood
+386,68,2017,5944,Englewood
+387,68,2016,6309,Englewood
+388,68,2015,7261,Englewood
+389,68,2014,7124,Englewood
+390,69,2019,6753,Greater Grand Crossing
+391,69,2018,6387,Greater Grand Crossing
+392,69,2017,6497,Greater Grand Crossing
+393,69,2016,6622,Greater Grand Crossing
+394,69,2015,6790,Greater Grand Crossing
+395,69,2014,6767,Greater Grand Crossing
+396,7,2019,4316,Lincoln Park
+397,7,2018,5019,Lincoln Park
+398,7,2017,4479,Lincoln Park
+399,7,2016,4249,Lincoln Park
+400,7,2015,3765,Lincoln Park
+401,7,2014,4092,Lincoln Park
+402,70,2019,2348,Ashburn
+403,70,2018,2422,Ashburn
+404,70,2017,2514,Ashburn
+405,70,2016,2741,Ashburn
+406,70,2015,2322,Ashburn
+407,70,2014,2576,Ashburn
+408,71,2019,7623,Auburn Gresham
+409,71,2018,7443,Auburn Gresham
+410,71,2017,7546,Auburn Gresham
+411,71,2016,7621,Auburn Gresham
+412,71,2015,7864,Auburn Gresham
+413,71,2014,8009,Auburn Gresham
+414,72,2019,927,Beverly
+415,72,2018,929,Beverly
+416,72,2017,907,Beverly
+417,72,2016,991,Beverly
+418,72,2015,992,Beverly
+419,72,2014,906,Beverly
+420,73,2019,3222,Washington Heights
+421,73,2018,3220,Washington Heights
+422,73,2017,3098,Washington Heights
+423,73,2016,3231,Washington Heights
+424,73,2015,3180,Washington Heights
+425,73,2014,3209,Washington Heights
+426,74,2019,473,Mount Greenwood
+427,74,2018,574,Mount Greenwood
+428,74,2017,586,Mount Greenwood
+429,74,2016,614,Mount Greenwood
+430,74,2015,620,Mount Greenwood
+431,74,2014,672,Mount Greenwood
+432,75,2019,1876,Morgan Park
+433,75,2018,2149,Morgan Park
+434,75,2017,2122,Morgan Park
+435,75,2016,2009,Morgan Park
+436,75,2015,2091,Morgan Park
+437,75,2014,2155,Morgan Park
+438,76,2019,1688,O'Hare
+439,76,2018,1662,O'Hare
+440,76,2017,1689,O'Hare
+441,76,2016,1807,O'Hare
+442,76,2015,1752,O'Hare
+443,76,2014,2017,O'Hare
+444,77,2019,2508,Edgewater
+445,77,2018,2791,Edgewater
+446,77,2017,2644,Edgewater
+447,77,2016,2390,Edgewater
+448,77,2015,2266,Edgewater
+449,77,2014,2332,Edgewater
+450,8,2019,12587,Near North Side
+451,8,2018,13102,Near North Side
+452,8,2017,12334,Near North Side
+453,8,2016,10580,Near North Side
+454,8,2015,9088,Near North Side
+455,8,2014,9001,Near North Side
+456,9,2019,268,Edison Park
+457,9,2018,254,Edison Park
+458,9,2017,275,Edison Park
+459,9,2016,310,Edison Park
+460,9,2015,258,Edison Park
+461,9,2014,244,Edison Park
