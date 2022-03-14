@@ -218,4 +218,4 @@ def preprocess_choro(path_to_geojson, path_to_csv):
 
 
 if __name__ == "__main__":
-    app.run_server(host='127.0.0.1',port=8600)
+    app.run_server(host='127.0.0.1',port=8500)
