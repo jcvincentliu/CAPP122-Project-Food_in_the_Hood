@@ -21,8 +21,8 @@
 
 ## Running The Software
 
-** Language requirements:** Python 3.8.5
-** Required Libraries:** see requirements.txt
+**Language requirements:** Python 3.8.5
+**Required Libraries:** see requirements.txt
 
 Code to run from the command line
 
