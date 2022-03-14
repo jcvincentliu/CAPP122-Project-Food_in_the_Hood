@@ -13,7 +13,7 @@ import json
 from dash.dependencies import Input, Output, State
 
 
-df = pd.read_csv('../data/crime_food_geography_info.csv')
+df = pd.read_csv('../data/food_data.csv')
 vars = [var for var in df.columns if not var in ['community_area','community_area_name']]
 app = dash.Dash(external_stylesheets=[dbc.themes.FLATLY])
 
