@@ -2,15 +2,8 @@
 Functions for getting data from Chicago Data Portal
 
 Ryoya Hashimoto
-"""
 
-import os
-import requests
-import json
-import pandas as pd
-from sodapy import Socrata
 
-"""
 This module gets the number of crimes by Chicago neighborhood from Chicago Data Portal.
 
 Crimes - 2001 to present -
@@ -21,6 +14,9 @@ import get_data_from_portal
 get_data_from_portal.get_crime_data()
 get_data_from_portal.getting_rolling_data()
 """
+
+import pandas as pd
+from sodapy import Socrata
 
 
 crime_dic = {"crime_2019":"w98m-zvie",
@@ -35,24 +31,24 @@ def get_crime_data():
     """
     This function gets the number of crimes by neighborhood from Chicago Data Portal as csv file
     If you want data prior to 2014, you need to add the year and id in the 'crime_dic' dictionary.
-    Be careful that the amount of data is really huge. 
+    Be careful that the amount of data is really huge.
 
     Input:
         Nothing
-    
+
     Output:
         Nothing
     """
     token = "HkPf9JPzH4xwuY73nVnC5K3AQ"
     client = Socrata("data.cityofchicago.org", token)
 
-    for year, id in crime_dic.items():
-        results = client.get(id, limit=1000000)
+    for year, crime_id in crime_dic.items():
+        results = client.get(crime_id, limit=1000000)
         df = pd.DataFrame.from_records(results)
         df_col = df[['id','community_area','year']]
         num_crime = df_col.groupby(['community_area','year']).size().reset_index()
         num_crime.to_csv(f'{year}.csv', index=False)
-    
+
     df = concatenate_csv()
     df.to_csv('total_crime.csv', index=False)
 
@@ -69,7 +65,7 @@ def concatenate_csv():
         df (pandas dataframe): merged dataframe
     """
     df = pd.read_csv('crime_2019.csv')
-    for year in crime_dic.keys():
+    for year in crime_dic:
         if year != 'crime_2019':
             next_df = pd.read_csv(f'{year}.csv')
             df = pd.concat([df,next_df],axis=0)
@@ -78,12 +74,12 @@ def concatenate_csv():
 
 def getting_rolling_data():
     """
-    To compare data from Chicago Data Atlas, this function creates average number of crimes 
+    To compare data from Chicago Data Atlas, this function creates average number of crimes
     over 5 years as csv file.
-    
+
     Input:
         Nothing
-    
+
     Output:
         Nothing
     """

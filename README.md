@@ -3,7 +3,7 @@
 ## Contents
 
 - App Folder 
-    - manage.py - script for creating dash dahsboard visualization
+    - manage.py - script for creating dashboard visualization with Dash
     - decision_tree.py - script for analyzing data using a decision tree classification algorithm
     - install.sh - shell script for creating the virtual environment
     - requirements.txt - text file of required libraries to install in virtual environment
@@ -29,7 +29,8 @@ Code to run from the command line
 1. `bash install.sh`
 2. `source env/bin/activate`
 3. `python3 decision_tree.py & python3 manage.py`
-4.  Navigate to the address from the previous step, e.g. http://127.0.0.1:8600/, in a web browser.
+4.  Navigate to the address from the previous step, e.g. http://127.0.0.1:8500/, in a web browser.
+5.  `jupyter notebook regression.ipynb` and follow one of the http: links and open regression.ipnyb
 
 ## Examples of Interacting with the Software
 
