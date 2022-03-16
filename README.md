@@ -18,6 +18,7 @@
 
     - Crime Folder
         - get_data_from_portal.py - script for getting data from Chicago Data Portal
+        - total_crime.csv - used in visualizations in visualization_report.ipynb 
         - several csv files related to crime data
 
 ## Running The Software
