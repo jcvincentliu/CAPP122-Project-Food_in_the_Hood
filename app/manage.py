@@ -1,3 +1,8 @@
+"""
+Application for our visualization
+
+Ryoya Hashimoto, Takayuki Nitta
+"""
 import dash
 from matplotlib.pyplot import figure
 import dash_bootstrap_components as dbc
@@ -113,7 +118,7 @@ content = html.Div(
         dbc.Row(
             [
                 dbc.Col([
-                    html.P('Map of Chicago Neighborhood',
+                    html.P('Choropleth Map',
                         className='font-weight-bold'),
                         dcc.Graph(id="choropleth",
                                 className='bg-light')])
@@ -189,16 +194,30 @@ def update_bar(n_clicks, cat_pick):
 
     return fig_bar, title_bar
 
-# Choropleth
+# Choropleth Map
 @app.callback(Output("choropleth", 'figure'), 
               Input('my-button', 'n_clicks'),
               State('catpick', 'value'))
 
 
 def display_choropleth(n_clicks, catpick):
+    """
+    This function creates a choropleth map in Chicago.
+
+    Input:
+        n_clicks: (int) Takes 1 if user clicks the apply button otherwise 0
+        catpick: (list) List of variables like "low_food_access"
+    
+    Output:
+        fig: (figure object) a choropleth map in Chicago
+    """
+    #Set center latitude and longitude of the map
     CENTER = {'lat': 41.8781, 'lon': -87.6298}
+
+    #Combine the main data and Chicago geographic data
     chi2 = preprocess_choro('../data/chicago_community_areas.geojson', '../data/food_data.csv')
-    print(chi2)
+
+    #Create a choropleth map
     fig = px.choropleth_mapbox(chi2, geojson=json.loads(chi2['geometry'].to_json()), 
         locations='community_area_ID', color= catpick,
         labels = name_dic,
@@ -215,13 +234,34 @@ def display_choropleth(n_clicks, catpick):
 
 
 def preprocess_choro(path_to_geojson, path_to_csv):
+    """
+    This function combines the main data and Chicago geographic data.
+
+    Input:
+        path_to_geojson: (str) File path to Chicago geojson file
+        path_to_csv: (str) File path to the csv file containg the main data
+    
+    Output:
+        chi2: (dataframe) Dataframe which contains the main data and Chicago geographic data
+    """
+    #Read Chicago geojson file
     chi = gpd.read_file(path_to_geojson)
+
+    #Preprocess the geojson file for merge
     chi = chi.rename(columns={'area_num_1': 'community_area_ID', 'community' : 'community_area_name'})
+
+    #Read the main data file
     df = pd.read_csv(path_to_csv)
     df['community_area'] = df['community_area'].astype(str)
+
+    #Preprocess the dataframe for merge
     df = df.rename(columns={'community_area': 'community_area_ID'})
     df['community_area_name'] = df['community_area_name'].str.upper()
+
+    #Merge the geojson and main data
     chi2 = pd.merge(chi, df, on=['community_area_ID'])
+
+    #Set index in order to match community area ID
     chi2.set_index('community_area_ID', drop=False, inplace=True)
     
     return chi2
