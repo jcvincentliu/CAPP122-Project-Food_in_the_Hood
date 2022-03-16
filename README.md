@@ -32,7 +32,8 @@ Code to run from the command line
 3. `python3 decision_tree.py & python3 manage.py`
 4.  Navigate to the address from the previous step, e.g. http://127.0.0.1:8500/, in a web browser.
 5.  `jupyter notebook regression.ipynb` and follow one of the links starting with http://localhost: or http://127.0.0.1: in a web browser and select "regression.ipynb"
-6.  (Optional): `jupyter notebook visualization_report.ipynb` and follow one of the links starting with http://localhost: or http://127.0.0.1: in a web browser and select "visualization_report.ipynb" (You may need to run the notebook file line by line in order to see the visualizations because of how Plotly works)
+6.  (Optional): `jupyter notebook visualization_report.ipynb` and follow one of the links starting with http://localhost: or http://127.0.0.1: in a web browser and select "visualization_report.ipynb" 
+     (**Note**:u may need to run the notebook file line by line in order to see the visualizations because of how Plotly works)
 
 ## Examples of Interacting with the Software
 
