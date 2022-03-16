@@ -10,7 +10,7 @@ import pandas as pd
 
 def get_atlas_population():
     """
-    This function get the population data from Chicago Data Atlas.
+    This function gets the population data from Chicago Data Atlas.
 
     Input:
         Nothing
