@@ -29,7 +29,7 @@ Code to run from the command line
 1. `bash install.sh`
 2. `source env/bin/activate`
 3. `python3 decision_tree.py & python3 manage.py`
-4.  Navigate to the address from the previous step, e.g. http://127.0.0.1:8600/, in a web browser.
+4.  Navigate to the address from the previous step, e.g. http://127.0.0.1:8500/, in a web browser.
 
 ## Examples of Interacting with the Software
 
