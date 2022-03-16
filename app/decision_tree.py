@@ -54,7 +54,6 @@ def process_data():
     Loads and processes data creating a dataframe with categorized variables, training data, and testing data
     
     Returns:
-        df_cat: (Pandas dataframe) dataframe with categorized variables
         training_set: (Pandas dataframe) dataframe for building classification model
         testing_set: (Pandas dataframe) dataframe for testing classification model
     '''
@@ -96,7 +95,6 @@ def build_model(node):
     Recursive model to build out decisions tree using training set
     Inputs:
         node: Node object for further splitting
-        column_set: set of attribute column names
     Output:
         decision_tree: Node object
     '''
@@ -236,7 +234,6 @@ def compute_gini(col):
     '''
     Computes the gini score and split info for an attribute column
     Inputs:
-        df: (Pandas dataframe) Pandas dataframe representing the multiset
         col: (Pandas Series) Attribute for which we are computing the gini score
     Outputs: gini score
     '''
@@ -277,7 +274,7 @@ def compute_gain_ratio(gini_T, attr_dict):
 
 def classify_data(tree, df, result_lst):
     '''
-    Traverses a model (tree) built from training data and
+    Traverses a model built from training data and
     generates predicted values of a target attribute for testing data
     Inputs:
         tree: Node object
