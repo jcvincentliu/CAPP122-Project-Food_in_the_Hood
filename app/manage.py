@@ -201,6 +201,7 @@ def display_choropleth(n_clicks, catpick):
     print(chi2)
     fig = px.choropleth_mapbox(chi2, geojson=json.loads(chi2['geometry'].to_json()), 
         locations='community_area_ID', color= catpick,
+        labels = name_dic,
         hover_name = 'community_area_name_x',
         color_continuous_scale="OrRd", 
         mapbox_style='white-bg',
