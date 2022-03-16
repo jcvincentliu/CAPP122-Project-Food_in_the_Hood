@@ -25,7 +25,7 @@
 **Language requirements:** Python 3.8.5
 **Required Libraries:** see requirements.txt
 
-Code to run from the command line
+Code to run from the command line from within the app directory:
 
 1. `bash install.sh`
 2. `source env/bin/activate`
