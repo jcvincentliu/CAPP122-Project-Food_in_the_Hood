@@ -1,5 +1,5 @@
 """
-Application for visualization
+Application for Dash Visualization
 
 Ryoya Hashimoto, Takayuki Nitta
 """
@@ -63,7 +63,7 @@ fig_corr.update_layout(width=1040,
                        paper_bgcolor='rgba(0,0,0,0)'
                        )
 
-#Create a sidebar (left part of our dashboard)
+#Create left sidebar 
 sidebar = html.Div(
     [
         dbc.Row(
@@ -105,7 +105,7 @@ sidebar = html.Div(
         ]
     )
 
-#Create a content part (right part of our dashboard)
+#Create content (right side of dashboard)
 content = html.Div(
     [
         dbc.Row(
@@ -164,10 +164,11 @@ def update_explanation(n_clicks, cat_pick):
 
     Input:
         n_clicks: (int) Takes 1 if user clicks the apply button otherwise 0
-        catpick: (str) List of variables like "low_food_access"
+        catpick: (list) list of strings where strings represent variable names,
+        e.g. "low_food_access"
     
     Output:
-        explanation: (str) a description for a variable
+        explanation: (str) a description of selected variable
     """
     explanation = dic[cat_pick]
     return explanation
@@ -181,15 +182,18 @@ def update_explanation(n_clicks, cat_pick):
 
 def update_bar(n_clicks, cat_pick):
     """
-    This function updates the bar chart on our dashboard.
+    This function updates the bar chart on the dashboard
 
     Input:
-        n_clicks: (int) Takes 1 if user clicks the apply button otherwise 0
-        catpick: (str) List of variables like "low_food_access"
+        n_clicks: (int) Takes a value of 1 if user clicks the apply button,
+        and 0 otherwise
+        catpick: (list) list of strings where strings represent variable names,
+        e.g. "low_food_access"
     
     Output:
-        fig_bar: (figure object) Bar chart which shows the level of selected variable by neighborhood
-        title_bar: (str) Ttile of the Bar chart
+        fig_bar: (figure object) Bar chart which shows the level of selected variable
+        by neighborhood
+        title_bar: (str) Title of the Bar chart
     """
     df_bar = df[cat_pick]
     fig_bar = go.Figure(data=[
@@ -226,14 +230,16 @@ def update_bar(n_clicks, cat_pick):
 
 def display_choropleth(n_clicks, catpick):
     """
-    This function creates a choropleth map in Chicago.
+    This function creates a choropleth map of Chicago.
 
     Input:
-        n_clicks: (int) Takes 1 if user clicks the apply button otherwise 0
-        catpick: (str) List of variables like "low_food_access"
+        n_clicks: (int) Takes a value of 1 if user clicks the apply button,
+        and 0 otherwise
+        catpick: (list) list of strings where strings represent variable names,
+        e.g. "low_food_access"
 
     Output:
-        fig: (figure object) Choropleth map in Chicago
+        fig: (figure object) Choropleth map of Chicago
     """
     #Set center latitude and longitude of the map
     CENTER = {'lat': 41.8781, 'lon': -87.6298}
@@ -263,7 +269,7 @@ def preprocess_choro(path_to_geojson, path_to_csv):
 
     Input:
         path_to_geojson: (str) File path to Chicago geojson file
-        path_to_csv: (str) File path to the csv file containg the main data
+        path_to_csv: (str) File path to food_data.csv file
 
     Output:
         chi2: (dataframe) Dataframe which contains the main data and Chicago geographic data
@@ -275,7 +281,7 @@ def preprocess_choro(path_to_geojson, path_to_csv):
     chi = chi.rename(columns={'area_num_1': 'community_area_ID', \
         'community' : 'community_area_name'})
 
-    #Read the main data file
+    #Read food_data.csv
     df = pd.read_csv(path_to_csv)
     df['community_area'] = df['community_area'].astype(str)
 
@@ -283,7 +289,7 @@ def preprocess_choro(path_to_geojson, path_to_csv):
     df = df.rename(columns={'community_area': 'community_area_ID'})
     df['community_area_name'] = df['community_area_name'].str.upper()
 
-    #Merge the geojson and main data
+    #Merge geojson and food_data.csv
     chi2 = pd.merge(chi, df, on=['community_area_ID'])
 
     #Set index in order to match community area ID
