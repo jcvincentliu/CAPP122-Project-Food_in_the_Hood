@@ -17,6 +17,13 @@ df = pd.read_csv('../data/food_data.csv')
 vars = [var for var in df.columns if not var in ['community_area','community_area_name']]
 app = dash.Dash(external_stylesheets=[dbc.themes.FLATLY])
 
+name_dic = {'adult_fruit_and_vegetable_servings_rate':'Adult fruit and vegetable servings rate',
+        'adult_soda_consumption_rate':'Adult soda consumption rate',
+        'low_food_access':'Low food access',
+        'poverty_rate':'Poverty rate',
+        'crime_rate':'Crime rate',
+        'population':'Population'}
+
 dic = {'adult_fruit_and_vegetable_servings_rate':'Percent of adults who reported \
             eating five or more servings of fruits and vegetables (combined) daily.',
         'adult_soda_consumption_rate':'Percent of adults who drank soda or pop or other \
@@ -55,10 +62,10 @@ sidebar = html.Div(
     [
         dbc.Row(
             [
-                html.H5('Food insecurity',
+                html.H5('All food in the Neighborhood',
                         style={'margin-top': '12px', 'margin-left': '24px'})
                 ],
-            style={"height": "5vh"},
+            style={"height": "10vh"},
             className='bg-primary text-white font-italic'
             ),
         dbc.Row(
@@ -70,7 +77,7 @@ sidebar = html.Div(
                     dcc.Dropdown(id='catpick', multi=False, value='adult_fruit_and_vegetable_servings_rate',
                                  options=[{'label': x, 'value':x}
                                           for x in vars],
-                                 style={'width': '220px'}
+                                 style={'width': '200px'}
                                  ),
                     html.Button(id='my-button', n_clicks=0, children='apply',
                                 style={'margin-top': '16px'},
@@ -86,7 +93,7 @@ sidebar = html.Div(
                 html.P(id='explanation',
                         className='font-weight-bold')
                 ],
-            style={"height": "45vh"}
+            style={"height": "40vh"}
             )
         ]
     )
@@ -165,6 +172,8 @@ def update_bar(n_clicks, cat_pick):
     fig_bar.update_layout(
         width=1500,
         height=250,
+        xaxis={'categoryorder':'total descending'},
+        xaxis_tickangle=-45,
         margin=dict(l=40, r=20, t=20, b=30),
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
@@ -176,7 +185,7 @@ def update_bar(n_clicks, cat_pick):
             x=1
         )
     )
-    title_bar = 'Bar chart: ' + cat_pick
+    title_bar = 'Bar chart: ' + name_dic[cat_pick]
 
     return fig_bar, title_bar
 
