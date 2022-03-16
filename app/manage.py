@@ -1,5 +1,5 @@
 """
-Application for our visualization
+Application for visualization
 
 Ryoya Hashimoto, Takayuki Nitta
 """
@@ -156,6 +156,16 @@ app.layout = dbc.Container(
               State('catpick', 'value'))
 
 def update_explanation(n_clicks, cat_pick):
+    """
+    This function updates the explanation on the side bar of our dashboard.
+
+    Input:
+        n_clicks: (int) Takes 1 if user clicks the apply button otherwise 0
+        catpick: (list) List of variables like "low_food_access"
+    
+    Output:
+        explanation: (str) a description for a variable
+    """
     explanation = dic[cat_pick]
     return explanation
 
@@ -167,6 +177,17 @@ def update_explanation(n_clicks, cat_pick):
               State('catpick', 'value'))
 
 def update_bar(n_clicks, cat_pick):
+    """
+    This function updates the bar chart on our dashboard.
+
+    Input:
+        n_clicks: (int) Takes 1 if user clicks the apply button otherwise 0
+        catpick: (list) List of variables like "low_food_access"
+    
+    Output:
+        fig_bar: (figure object) Bar chart which shows the level of selected variable by neighborhood
+        title_bar: (str) Ttile of the Bar chart
+    """
     df_bar = df[cat_pick]
     fig_bar = go.Figure(data=[
         go.Bar(name=cat_pick,
@@ -209,7 +230,7 @@ def display_choropleth(n_clicks, catpick):
         catpick: (list) List of variables like "low_food_access"
     
     Output:
-        fig: (figure object) a choropleth map in Chicago
+        fig: (figure object) Choropleth map in Chicago
     """
     #Set center latitude and longitude of the map
     CENTER = {'lat': 41.8781, 'lon': -87.6298}
