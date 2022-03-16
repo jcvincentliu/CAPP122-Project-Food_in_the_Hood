@@ -3,7 +3,7 @@
 ## Contents
 
 - App Folder 
-    - manage.py - script for creating dash dahsboard visualization
+    - manage.py - script for creating dashboard visualization with Dash
     - decision_tree.py - script for analyzing data using a decision tree classification algorithm
     - install.sh - shell script for creating the virtual environment
     - requirements.txt - text file of required libraries to install in virtual environment
