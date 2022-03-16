@@ -164,11 +164,11 @@ def update_explanation(n_clicks, cat_pick):
 
     Input:
         n_clicks: (int) Takes 1 if user clicks the apply button otherwise 0
-        catpick: (list) list of strings where strings represent variable names,
+        catpick: (list) List of strings where strings represent variable names,
         e.g. "low_food_access"
     
     Output:
-        explanation: (str) a description of selected variable
+        explanation: (str) Description of selected variable
     """
     explanation = dic[cat_pick]
     return explanation
@@ -187,7 +187,7 @@ def update_bar(n_clicks, cat_pick):
     Input:
         n_clicks: (int) Takes a value of 1 if user clicks the apply button,
         and 0 otherwise
-        catpick: (list) list of strings where strings represent variable names,
+        catpick: (list) List of strings where strings represent variable names,
         e.g. "low_food_access"
     
     Output:
@@ -235,7 +235,7 @@ def display_choropleth(n_clicks, catpick):
     Input:
         n_clicks: (int) Takes a value of 1 if user clicks the apply button,
         and 0 otherwise
-        catpick: (list) list of strings where strings represent variable names,
+        catpick: (list) List of strings where strings represent variable names,
         e.g. "low_food_access"
 
     Output:
