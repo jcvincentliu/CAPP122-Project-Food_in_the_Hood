@@ -30,7 +30,8 @@ Code to run from the command line
 2. `source env/bin/activate`
 3. `python3 decision_tree.py & python3 manage.py`
 4.  Navigate to the address from the previous step, e.g. http://127.0.0.1:8500/, in a web browser.
-5.  `jupyter notebook regression.ipynb` and follow one of the http: links and open regression.ipnyb
+5.  `jupyter notebook regression.ipynb` and follow one of the http: links and open regression.ipnyb  
+   (If you were required for Password or Token, please enter `59fa90841a008fbc90400d4ebdca537ae241d9ced4f6f0cf`)
 
 ## Examples of Interacting with the Software
 
