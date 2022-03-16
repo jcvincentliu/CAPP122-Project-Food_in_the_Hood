@@ -3,6 +3,7 @@ Application for our visualization
 
 Ryoya Hashimoto, Takayuki Nitta
 """
+import json
 import dash
 from matplotlib.pyplot import figure
 import dash_bootstrap_components as dbc
@@ -14,7 +15,6 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 import plotly.express as px
 import geopandas as gpd
-import json
 from dash.dependencies import Input, Output, State
 
 
@@ -22,10 +22,10 @@ df = pd.read_csv('../data/food_data.csv')
 vars = [var for var in df.columns if not var in ['community_area','community_area_name']]
 app = dash.Dash(external_stylesheets=[dbc.themes.FLATLY])
 
-name_dic = {'adult_fruit_and_vegetable_servings_rate':'Adult fruit and vegetable servings rate',
-        'adult_soda_consumption_rate':'Adult soda consumption rate',
-        'low_food_access':'Low food access',
-        'poverty_rate':'Poverty rate',
+name_dic = {'adult_fruit_and_vegetable_servings_rate':'Adult fruit and vegetable servings rate (%)',
+        'adult_soda_consumption_rate':'Adult soda consumption rate (%)',
+        'low_food_access':'Low food access (%)',
+        'poverty_rate':'Poverty rate (%)',
         'crime_rate':'Crime rate',
         'population':'Population'}
 
@@ -63,6 +63,7 @@ fig_corr.update_layout(width=1040,
                        paper_bgcolor='rgba(0,0,0,0)'
                        )
 
+#Create a sidebar (left part of our dashboard)
 sidebar = html.Div(
     [
         dbc.Row(
@@ -79,7 +80,8 @@ sidebar = html.Div(
                     html.P('Variables',
                            style={'margin-top': '8px', 'margin-bottom': '4px'},
                            className='font-weight-bold'),
-                    dcc.Dropdown(id='catpick', multi=False, value='adult_fruit_and_vegetable_servings_rate',
+                    dcc.Dropdown(id='catpick', multi=False,
+                                 value='adult_fruit_and_vegetable_servings_rate',
                                  options=[{'label': x, 'value':x}
                                           for x in vars],
                                  style={'width': '200px'}
@@ -103,6 +105,7 @@ sidebar = html.Div(
         ]
     )
 
+#Create a content part (right part of our dashboard)
 content = html.Div(
     [
         dbc.Row(
@@ -151,11 +154,21 @@ app.layout = dbc.Container(
     )
 
 # Definition of variables
-@app.callback(Output("explanation", 'children'), 
+@app.callback(Output("explanation", 'children'),
               Input('my-button', 'n_clicks'),
               State('catpick', 'value'))
 
 def update_explanation(n_clicks, cat_pick):
+    """
+    This function creates an explanation for a variable you choose.
+
+    Input:
+        n_clicks: (int) Takes 1 if user clicks the apply button otherwise 0
+        catpick: (list) List of variables like "low_food_access"
+
+    Output:
+        explanation: (str) an explanation for a variable you choose
+    """
     explanation = dic[cat_pick]
     return explanation
 
@@ -167,6 +180,17 @@ def update_explanation(n_clicks, cat_pick):
               State('catpick', 'value'))
 
 def update_bar(n_clicks, cat_pick):
+    """
+    This function creates a bar chart for a variable you choose.
+
+    Input:
+        n_clicks: (int) Takes 1 if user clicks the apply button otherwise 0
+        catpick: (list) List of variables like "low_food_access"
+
+    Output:
+        fig_bar: (figure object) a bar chart for a variable you choose
+        title_bar: (str) variable name you choose
+    """
     df_bar = df[cat_pick]
     fig_bar = go.Figure(data=[
         go.Bar(name=cat_pick,
@@ -195,7 +219,7 @@ def update_bar(n_clicks, cat_pick):
     return fig_bar, title_bar
 
 # Choropleth Map
-@app.callback(Output("choropleth", 'figure'), 
+@app.callback(Output("choropleth", 'figure'),
               Input('my-button', 'n_clicks'),
               State('catpick', 'value'))
 
@@ -207,7 +231,7 @@ def display_choropleth(n_clicks, catpick):
     Input:
         n_clicks: (int) Takes 1 if user clicks the apply button otherwise 0
         catpick: (list) List of variables like "low_food_access"
-    
+
     Output:
         fig: (figure object) a choropleth map in Chicago
     """
@@ -218,13 +242,13 @@ def display_choropleth(n_clicks, catpick):
     chi2 = preprocess_choro('../data/chicago_community_areas.geojson', '../data/food_data.csv')
 
     #Create a choropleth map
-    fig = px.choropleth_mapbox(chi2, geojson=json.loads(chi2['geometry'].to_json()), 
+    fig = px.choropleth_mapbox(chi2, geojson=json.loads(chi2['geometry'].to_json()),
         locations='community_area_ID', color= catpick,
         labels = name_dic,
         hover_name = 'community_area_name_x',
-        color_continuous_scale="OrRd", 
+        color_continuous_scale="OrRd",
         mapbox_style='white-bg',
-        zoom=9, 
+        zoom=9,
         center=CENTER,
         opacity=0.5,
         )
@@ -240,7 +264,7 @@ def preprocess_choro(path_to_geojson, path_to_csv):
     Input:
         path_to_geojson: (str) File path to Chicago geojson file
         path_to_csv: (str) File path to the csv file containg the main data
-    
+
     Output:
         chi2: (dataframe) Dataframe which contains the main data and Chicago geographic data
     """
@@ -248,7 +272,8 @@ def preprocess_choro(path_to_geojson, path_to_csv):
     chi = gpd.read_file(path_to_geojson)
 
     #Preprocess the geojson file for merge
-    chi = chi.rename(columns={'area_num_1': 'community_area_ID', 'community' : 'community_area_name'})
+    chi = chi.rename(columns={'area_num_1': 'community_area_ID', \
+        'community' : 'community_area_name'})
 
     #Read the main data file
     df = pd.read_csv(path_to_csv)
@@ -263,7 +288,7 @@ def preprocess_choro(path_to_geojson, path_to_csv):
 
     #Set index in order to match community area ID
     chi2.set_index('community_area_ID', drop=False, inplace=True)
-    
+
     return chi2
 
 
