@@ -43,7 +43,7 @@ def get_atlas_population():
 
 def get_atlas_food():
     """
-    This function get the data related to food insecurity from Chicago Data Atlas.
+    This function get the data related to food insecurity from Chicago Health Atlas.
 
     Input:
         Nothing
@@ -98,7 +98,6 @@ def get_atlas_food():
     df.to_csv('food_data.csv', index=False)
 
 
-
 def concatenating_datasets():
     """
     This function merges two dataframes (rolling_total_crime.csv and total_population.csv)
@@ -131,8 +130,20 @@ def concatenating_datasets():
 
 
 def append_results(results):
+    """
+    This function appends the result of a request for Chicago Health Atlas.
+
+    Input:
+        results: (list) List of requested results 
+    
+    Output:
+        df: (DataFrame) Value, period, ..etc corresponding the key (e.g. "POP") representing an indicator 
+    """
+    #Create a dataframe and set columns
     cols = ['key', 'period', 'data_value', 'geo_layer', 'geo_id_label', 'population', 'std_error']
     df = pd.DataFrame(columns = cols)
+
+    #Append a result of scraping
     for result in results:
         key = result['a']
         period = result['d']
@@ -147,10 +158,18 @@ def append_results(results):
     
     return df
 
-        
-### Programs for getting keys  ###
 
+### Programs only for getting keys  ###
 def get_atlas_keys():
+    """
+    This function creates the csv file "atlas_key_list.csv" which includes the name, key and description about an indicator.
+
+    Input:
+        Nothing
+    
+    Output:
+        Nothing
+    """
     base_url = "https://chicagohealthatlas.org/api/v1/topics/?offset="
     df_topic = get_df_topic(base_url)
 
@@ -158,14 +177,26 @@ def get_atlas_keys():
 
 
 def get_df_topic(base_url):
+    """
+    This function creates a dataframe which includes the name, key and description about an indicator.
+
+    Input:
+        base_url: (str) Base url for scraping
+    
+    Output:
+        df_topic: (DataFrame) a dataframe which includes the name, key and description about an indicator
+    """
+    #Create a dataframe and set columns
     cols = ['name', 'key', 'description', 'units', 'format']
     df_topic = pd.DataFrame(columns = cols)
 
+    #Scrape by every 20 indicators
     for num in range(0,261,20):
         url = base_url + str(num)
         data = requests.get(url)
         results = data.json()["results"]
 
+    #Append a result of scraping
         for result in results:
             name = result['name']
             key = result['key']
