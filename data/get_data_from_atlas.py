@@ -1,69 +1,23 @@
+"""
+Functions for getting data from Chicago Health Atlas
+
+Takayuki Nitta, Ryoya Hashimoto
+"""
+
 import requests
 import pandas as pd
 
 
-topics_dic = {"Low food access":"LFA",
-"Neighborhood safety rate":"HCSNSP",
-"Per capita income":"PCI"}
-
-
-period_dic = {"2014-2018":"2014-2018",
-              "2015":"2015",
-              "2015-2017":"2015-2017",
-              "2015-2019":"2015-2019",
-              "2016-2018":"2016-2018",
-              "2019":"2019"}
-
-
-def get_atlas_ver2(topics_dic, period_dic):
-    cols = ['key', 'period', 'data_value', 'geo_layer', 'geo_id_label', 'population', 'std_error']
-    df = pd.DataFrame(columns = cols)
-    for _, topic in topics_dic.items():
-        for _, period in period_dic.items():
-            params = {"topic":topic, "population":"", "period": period, "layer":"neighborhood"}
-            url = "https://chicagohealthatlas.org/api/v1/data"
-            data = requests.get(url, params=params)
-            results = data.json()["results"]
-            df_results = append_results(results)
-            df = pd.concat([df, df_results], axis=0)
-    df = post_processing(df)
-    df.to_csv("atlas_result.csv")
-
-
-def post_processing(df):
-    key_name_dic =  create_key_name_dic()
-    for _, row in df.iterrows():
-        row_key = row['key']
-        row['key'] = key_name_dic[row_key]
-
-    df['geo_id_label'] = df['geo_id_label'].str.replace('1714000-','')
-    df = df.loc[:, ['key','geo_id_label','period','data_value']]
-    df_result = key_to_row(df)
-
-    return df_result
-
-
-def key_to_row(df):
-    name_list = []
-    for _, row in df.iterrows():
-        name_list.append(row['key'])
-    name_list = list(set(name_list))
-
-    df2 = pd.pivot(df, index=['geo_id_label', 'period'], columns='key', values='data_value')
-    df2 = df2[name_list].reset_index()
-    
-    return df2
-
-
-def create_key_name_dic():
-    dic = {}
-    key_name_list = pd.read_csv("atlas_key_list.csv")
-    for _, row in key_name_list.iterrows():
-        dic[row['key']] = row['name']
-    return dic
-
-
 def get_atlas_population():
+    """
+    This function get the population data from Chicago Data Atlas.
+
+    Input:
+        Nothing
+    
+    Output:
+        Nothing
+    """
     period_dic = {"POP2019":"2015-2019",
                   "POP2018":"2014-2018"}
     
@@ -88,6 +42,15 @@ def get_atlas_population():
 
 
 def get_atlas_food():
+    """
+    This function get the data related to food insecurity from Chicago Data Atlas.
+
+    Input:
+        Nothing
+    
+    Output:
+        Nothing
+    """
     period_dic = {"HCSFVP":"2016-2018",
                   "HCSSP":"2016-2018",
                   "LFA":"2019",
@@ -112,7 +75,6 @@ def get_atlas_food():
 
         df['geo_id_label'] = df['geo_id_label'].str.replace('1714000-','')
         df = df.rename(columns={'geo_id_label': 'community_area'})
-        #df = df.rename(columns={'period': 'year'})
         df.to_csv(f'{key}.csv', index=False)
 
     df = pd.read_csv('HCSFVP.csv')
@@ -126,16 +88,46 @@ def get_atlas_food():
     df_crime = pd.read_csv('crime_rate.csv')
     df_crime = df_crime[df_crime['year'] == '2015-2019']
     df_crime = df_crime.loc[:,['community_area','crime_rate', 'population']]
-    
     df = pd.merge(df, df_crime ,on=['community_area'], how='left')
 
-    #Merge community area name
+    #Assign neighborhood name to neighborhood id 
     df_name = pd.read_csv('poverty_and_crime.csv')
     df_name = df_name.loc[:,['community_area','community_area_name']]
-
     df = pd.merge(df, df_name ,on=['community_area'], how='left')
 
     df.to_csv('food_data.csv', index=False)
+
+
+
+def concatenating_datasets():
+    """
+    This function merges two dataframes (rolling_total_crime.csv and total_population.csv)
+    and create a new variable (crime_rate) as the number of all crimes per 10,000 people 
+    over the time period. A csv file is created as the result.
+
+    Input:
+        Nothing
+    
+    Output:
+        Nothing
+    """
+    #Load data 
+    df_crime = pd.read_csv('crime/rolling_total_crime.csv')
+    df_pop = pd.read_csv('total_population.csv')
+
+    #Change column names
+    df_pop = df_pop.rename(columns={'period':'year'})
+    df_pop = df_pop.rename(columns={'geo_id_label':'community_area'})
+    df_pop = df_pop.rename(columns={'data_value':'population'})
+
+    #Merge two dataframes
+    df_merge = pd.merge(df_crime,df_pop,on=['community_area','year'])
+
+    #Calculating the crime rate: divide the number of crimes by the population 
+    #of the neighborhood, and then multiply 10,000.
+    df_merge['crime_rate'] = (df_merge['crime_num']/df_merge['population'])*10000
+
+    df_merge.to_csv("crime_rate.csv", index=False)
 
 
 def append_results(results):
@@ -185,25 +177,3 @@ def get_df_topic(base_url):
 
     return df_topic
 
-
-def concatenating_datasets():
-    df_crime = pd.read_csv('crime/rolling_total_crime.csv')
-    
-    df_pop = pd.read_csv('total_population.csv')
-    df_pop = df_pop.rename(columns={'period':'year'})
-    df_pop = df_pop.rename(columns={'geo_id_label':'community_area'})
-    df_pop = df_pop.rename(columns={'data_value':'population'})
-
-    df_merge = pd.merge(df_crime,df_pop,on=['community_area','year'])
-
-    df_merge['crime_rate'] = (df_merge['crime_num']/df_merge['population'])*10000
-
-    df_atlas = pd.read_csv('atlas_result.csv')
-    df_atlas = df_atlas.rename(columns={'period':'year'})
-    df_atlas = df_atlas.rename(columns={'geo_id_label':'community_area'})
-    df_atlas = df_atlas.rename(columns={'data_value':'population'})
-
-    df_concatenate = pd.merge(df_atlas, df_merge ,on=['community_area','year'], how='left')
-    df_concatenate = df_concatenate.sort_values(['community_area', 'year'], ignore_index=True)
-
-    df_concatenate.to_csv("crime_rate.csv", index=False)
