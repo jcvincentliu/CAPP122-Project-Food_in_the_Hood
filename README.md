@@ -32,9 +32,13 @@ Code to run from the command line from within the app directory:
 2. `source env/bin/activate`
 3. `python3 decision_tree.py & python3 manage.py`
 4.  Navigate to the address from the previous step, e.g. http://127.0.0.1:8500/, in a web browser.
-5.  `jupyter notebook regression.ipynb` and follow one of the links starting with http://localhost: (e.g. http://localhost:8888/?token=59fa90841a008fbc90400d4ebdca537ae241d9ced4f6f0cf) or http://127.0.0.1: (e.g. http://127.0.0.1:8888/?token=59fa90841a008fbc90400d4ebdca537ae241d9ced4f6f0cf) in a web browser and select "regression.ipynb" (**Note**: statsmodels package may need to be installed locally; for some group members this package was causing problems in loading the notebook)
+5.  `jupyter notebook regression.ipynb` and follow one of the links starting with http://localhost: (e.g. http://localhost:8888/?token=59fa90841a008fbc90400d4ebdca537ae241d9ced4f6f0cf) or http://127.0.0.1: (e.g. http://127.0.0.1:8888/?token=59fa90841a008fbc90400d4ebdca537ae241d9ced4f6f0cf) in a web browser and select "regression.ipynb" 
+
+    (**Note**: statsmodels package may need to be installed locally; for some group members this package was causing problems in loading the notebook)
+
 6.  (Optional): `jupyter notebook visualization_report.ipynb` and follow one of the links starting with http://localhost: or http://127.0.0.1: in a web browser and select "visualization_report.ipynb" 
-     (**Note**: You may need to run the notebook file line by line in order to see the visualizations because of how Plotly works)
+
+    (**Note**: You may need to run the notebook file chunk by chunk in order to see the visualizations because of how Plotly works)
 
 ## Examples of Interacting with the Software
 
@@ -46,5 +50,4 @@ Code to run from the command line from within the app directory:
 - In addition to interactive visualizations, the dashboard also includes a correlation matrix heatmap, which visualizes the correlations between the following variables: adult fruit and vegetables servings rate, adult soda consumption rate, low food access, poverty rate, crime rate, and population
 <img width="1415" alt="Screen Shot 2022-03-13 at 7 04 49 PM" src="https://user-images.githubusercontent.com/89871328/158085402-db9ce5f9-fc16-4625-8186-bbf83e20c3b6.png">
 
-- The result from running the regression analysis substantiates our findings. Running a regression of `crime_rate` on `adult_fruit_and_vegetable_servings_rate`, `adult_soda_consumption_rate`, `low_food_access`, `poverty_rate`, and `population` shows that, again, `poverty_rate` and `adult_soda_consumption_rate` are the most statistically significant explanatory variables. Notably, a model with those only two variables succeeds in predicting crime rates when looking at R2, AIC, and BIC.
-<img width="877" alt="Screen Shot 2022-03-16 at 11 39 12 AM" src="https://user-images.githubusercontent.com/89871328/158644690-1dcffcd7-0cb5-4013-81b2-1d6b434e1c4e.png">
+- The result from running the regression analysis substantiates our findings. Running a regression of `crime_rate` on `adult_fruit_and_vegetable_servings_rate`, `adult_soda_consumption_rate`, `low_food_access`, `poverty_rate`, and `population` shows that, again, `poverty_rate` is the most statistically significant explanatory variables and `adult_soda_consumption_rate`, though not significant, appeared to have some influence. Notably, a model with those only two variables succeeded in predicting crime rates with the highest R2, adjusted R2, and the lowest AIC and BIC. <img width="877" alt="Screen Shot 2022-03-16 at 11 39 12 AM" src="https://user-images.githubusercontent.com/89871328/158644690-1dcffcd7-0cb5-4013-81b2-1d6b434e1c4e.png">
