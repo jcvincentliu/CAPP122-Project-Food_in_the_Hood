@@ -7,13 +7,14 @@
     - decision_tree.py - script for analyzing data using a decision tree classification algorithm
     - install.sh - shell script for creating the virtual environment
     - requirements.txt - text file of required libraries to install in virtual environment
+    - regression.ipynb
+    - visualization_report.ipynb
 
 - Data Folder
     - get_data_from_atlas.py - script for getting data from Chicago Health Atlas
     - food_data.csv - main file data file for dashboard visualizations and decision tree analysis
-    - visual.ipynb - jupyter notebook for data visualizations
-    - merge_and_visual_csv.ipynb - jupyter notebook for the comprehensive data visualization report
-    - several other csv files, jupyter notebooks for data visualizations
+    - poverty_and_crime.csv - data file used for additional visualizations in Visualization_report jupyter notebook
+    - several other draft csv files and draft jupyter notebooks for data visualizations
 
     - Crime Folder
         - get_data_from_portal.py - script for getting data from Chicago Data Portal
@@ -30,8 +31,8 @@ Code to run from the command line
 2. `source env/bin/activate`
 3. `python3 decision_tree.py & python3 manage.py`
 4.  Navigate to the address from the previous step, e.g. http://127.0.0.1:8500/, in a web browser.
-5.  `jupyter notebook regression.ipynb` and follow one of the http: links and open regression.ipnyb  
-   (If you were required for Password or Token, please enter `59fa90841a008fbc90400d4ebdca537ae241d9ced4f6f0cf`)
+5.  `jupyter notebook regression.ipynb` and follow one of the links starting with http://localhost: or http://127.0.0.1: in a web browser and select "regression.ipynb"
+6.  Additional visualizations: `jupyter notebook visualization_report.ipynb` and follow one of the links starting with http://localhost: or http://127.0.0.1: in a web browser and select "visualization_report.ipynb"
 
 ## Examples of Interacting with the Software
 
