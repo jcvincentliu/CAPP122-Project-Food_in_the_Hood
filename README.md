@@ -7,8 +7,8 @@
     - decision_tree.py - script for analyzing data using a decision tree classification algorithm
     - install.sh - shell script for creating the virtual environment
     - requirements.txt - text file of required libraries to install in virtual environment
-    - regression.ipynb
-    - visualization_report.ipynb
+    - regression.ipynb - jupyter notebook file for regression analysis
+    - visualization_report.ipynb - jupyter notebook file for cumulative visualization report
 
 - Data Folder
     - get_data_from_atlas.py - script for getting data from Chicago Health Atlas
@@ -16,10 +16,14 @@
     - poverty_and_crime.csv - data file used for additional visualizations in Visualization_report jupyter notebook
     - several other draft csv files and draft jupyter notebooks for data visualizations
 
-    - Crime Folder
+    - crime Folder
         - get_data_from_portal.py - script for getting data from Chicago Data Portal
         - total_crime.csv - used in visualizations in visualization_report.ipynb 
         - several csv files related to crime data
+
+    - project_visualizations folder
+        - visualization_report.ipynb - cumulative visualization report
+        - several other csv files necessary for creating visualizations
 
 ## Running The Software
 
